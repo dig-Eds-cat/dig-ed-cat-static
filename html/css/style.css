@@ -1,0 +1,237 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    flex: 0 0 auto;
+}
+
+.main-content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    background-color: #333;
+    /*#F8F8F8*/
+    color: #ffffff;
+    font-size: 13px;
+    padding: 20px;
+    /* position: absolute;*/
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+.extra-logo {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #868a89;
+    text-align: center;
+    margin: 5px;
+}
+
+.extra-logo img {
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+.extra-logo h4 {
+    vertical-align: middle;
+    padding-top: 18px;
+    margin-bottom: 30px;
+}
+
+.feed.title {
+    color: #43ac6a;
+}
+
+.feed.meta {
+    font-size: 70%;
+}
+
+.verticalLine {
+    border-left: 1px solid black;
+}
+
+.index-wrapper {
+    margin-bottom: 50px;
+}
+
+.news-wrapper {
+    border: none !important;
+    box-shadow: none;
+    text-align: justify;
+    /*box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);*/
+}
+
+.news-wrapper>.panel-heading {
+    background-color: white;
+    border-top: 3px solid black;
+    border-bottom: none !important;
+}
+
+/*to extend twitter widget when page grows*/
+iframe[id^='twitter-widget-'] {
+    height: 700px !important;
+    margin-bottom: 10px !important;
+}
+
+.procustom-btn {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    /*margin-left: 10px;
+    margin-right: 10px;*/
+    background-color: #ffffff;
+    color: #1d5771;
+    border: 3px solid #1d5771;
+    font-weight: bold;
+    white-space: normal;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.procustom-btn:hover {
+    background-color: #1d5771;
+    color: #ffffff;
+    border: 3px solid #1d5771;
+    font-weight: bold;
+}
+
+#report-btn {
+    width: 50%;
+}
+
+.alert-info {
+    background-color: #1d5771;
+    border-color: #1d5771;
+}
+
+.footer-logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+blockquote>footer {
+    background-color: #ffffff;
+}
+
+/*.navbar-right {
+  padding-right: 15px;
+  }*/
+.navbar-nav.navbar-right:last-child {
+    /*dirty fix due to https://github.com/twbs/bootstrap/issues/18362*/
+    margin-right: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1105px) {
+    .navbar-right {
+        float: none !important;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+}
+
+.btn {
+    font-weight: 600;
+    white-space: normal;
+}
+
+.btn-group .dropdown-toggle.btn-default~.dropdown-menu {
+    background: #ffffff;
+}
+
+.btn-default {
+    background-color: #ffffff;
+}
+
+.panel-heading>h2 {
+    font-weight: bold;
+}
+
+#docs-outline {
+    list-style-type: none;
+    padding-left: 0px;
+
+}
+
+#docs-outline>ul {
+    list-style-type: none;
+
+}
+
+#index-picture {
+    width: 50%;
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+@media (max-width: 768px) {
+    #index-picture {
+        width: 80%;
+    }
+}
+
+.empty-div {
+    height: 50px;
+    width: 100%;
+}
+
+.card-image {
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);
+}
+
+.main-flexbox {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-flow: row;
+    flex: 1 0 0;
+}
+
+.main-flexbox>.card {
+    /*height: 100%;*/
+    /*all cards are the same height*/
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 2px 2px 24px 0 rgba(0, 0, 0, .1);
+    flex: 3 1 50%;
+    order: 0;
+}
+
+.main-flexbox>.card {
+    margin: 10px;
+    padding: 20px;
+    /* Return them to document order */
+    order: 0;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: white;
+    background-color: black;
+    border-color: black;
+}
