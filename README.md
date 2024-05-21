@@ -1,6 +1,7 @@
 # Catalogue Digital Editions
 
-short description of the project
+* static version of https://dig-ed-cat.acdh.oeaw.ac.at/
+* see discussion https://github.com/acdh-oeaw/dig_ed_cat/issues/244
 
 ## install
 
