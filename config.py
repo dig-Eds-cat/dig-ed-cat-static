@@ -23,31 +23,31 @@ TS_CLIENT = typesense.Client(
 
 TS_SCHEMA_NAME = "dig-ed-cat"
 
-MANDATORY_FIELDS = ["id", "edition-name", "url"]
+MANDATORY_FIELDS = ["id", "edition_name", "url"]
 
 #  fields listed here expect multiple values separated with ";"
 FACET_FIELDS = [
-    "historical-period",
+    "historical_period",
     "language",
-    "writing-support",
-    "manager-or-editor",
+    "writing_support",
+    "manager_or_editor",
     "audience",
     "language",
-    "ocr-or-keyed",
-    "repository-of-source-material-s",
-    "place-of-origin-of-source-material-s",
-    "sponsor-funding-body",
+    "ocr_or_keyed",
+    "repository_of_source_material_s",
+    "place_of_origin_of_source_material_s",
+    "sponsor_funding_body",
     "infrastructure",
-    "website-language",
+    "website_language",
 ]
 
 #  fields listed here contain unique values
 NO_FACET_FIELDS = [
-    "edition-name",
+    "edition_name",
     "url",
-    "handle-pid",
-    "budget-rough",
-    "ride-review",
+    "handle_pid",
+    "budget_rough",
+    "ride_review",
 ]
 
 NO_INDEX_FIELDS = [
