@@ -50,21 +50,26 @@
                     </tr>
                     <tr>
                         <th scope="row">Scholarly</th>
-                        <td class="readmore">Sahle - An edition must have critical components - a pure facsimile is not an edition, a digital library is not an edition.</td>
+                        <td class="readmore">Sahle - An edition must have critical components - a pure facsimile is not
+                            an edition, a digital library is not an edition.</td>
                         <td>
                             {{ document_data.scholarly}}
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Digital</th>
-                        <td class="readmore">Sahle - A digital edition cannot be converted to a printed edition without substantial loss of content or functionality - vice versa: a retrodigitized printed edition is not a Scholarly Digital Edition (but it may evolve into a Scholarly Digital Edition through new content or functionalities).</td>
+                        <td class="readmore">Sahle - A digital edition cannot be converted to a printed edition without
+                            substantial loss of content or functionality - vice versa: a retrodigitized printed edition
+                            is not a Scholarly Digital Edition (but it may evolve into a Scholarly Digital Edition
+                            through new content or functionalities).</td>
                         <td>
-                           {{ document_data.digital}}
+                            {{ document_data.digital}}
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Writing support</th>
-                        <td class="readmore">The nature or materiality of the source text (manuscript, letter, notebook, etc.).</td>
+                        <td class="readmore">The nature or materiality of the source text (manuscript, letter, notebook,
+                            etc.).</td>
                         <td>
                             <ul class="list-unstyled">
                                 {% for x in document_data.writing_support %}
@@ -75,13 +80,107 @@
                     </tr>
                     <tr>
                         <th scope="row">Language</th>
-                        <td class="readmore"> 	The language(s) of the source text (three-letter ISO codes used).</td>
+                        <td class="readmore">The language(s) of the source text (three-letter ISO codes used).</td>
                         <td>
                             <ul class="list-unstyled">
                                 {% for x in document_data.language %}
                                 <li>{{ x }}</li>
                                 {% endfor %}
                             </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Begin date</th>
+                        <td class="readmore">Year the project started.</td>
+                        <td>
+                            {{ document_data.begin_date }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">End date</th>
+                        <td class="readmore">Year the project ended..</td>
+                        <td>
+                            {{ document_data.end_date }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Manager</th>
+                        <td class="readmore">Name of project manager(s).</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.manager_or_editor %}
+                                <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Institution</th>
+                        <td class="readmore">Name(s) of institution(s) involved in the project.</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.institution_s %}
+                                <li><a href="{{ x.institution_website }}">{{ x.institution_name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Repository of Source Material(s)</th>
+                        <td class="readmore">The institution(s) that house the source text(s).</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.repository_of_source_material_s %}
+                                <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Audience</th>
+                        <td class="readmore">The project's target audience.</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.audience %}
+                                <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Philological statement</th>
+                        <td class="readmore">
+                            <ul>
+                                <li><strong>no</strong> No information on the editorial methods and practices nor on the source (digital or printed) of the text.</li>
+                                <li>
+                                    <strong>partly</strong> Some information about the source, and of the author, date and accuracy of the digital edition.
+                                </li>
+                                <li>
+                                    <strong>yes</strong> information on the source of the text, as well as on the author, date and
+                                    accuracy of the digital edition; (Digital Humanities) standards implemented, including
+                                    modelling, markup language, data structure and software.
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            {{ document_data.philological_statement }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Account of textual variance</th>
+                        <td class="readmore">
+                            <ul>
+                                <li><strong>no</strong> No account of textual variance is given. The digital edition is a reproduction of a given print edition without any account of variants.</li>
+                                <li>
+                                    <strong>partly</strong> The digital edition is a reproduction of a given print scholarly edition and reproduces the selected textual variants extant in the apparatus criticus of that edition, or: the edition does not follow a digital paradigm, in that the variants are not automatically computable the way they are encoded.
+                                </li>
+                                <li>
+                                    <strong>yes</strong>  This edition is “based on full-text transcription of original texts into electronic form” (vd. Proposition 2 in <a href="http://www.tei-c.org/About/Archive_new/ETE/Preview/robinson.xml">this article by P. Robinson</a>).
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            {{ document_data.account_of_textual_variance }}
                         </td>
                     </tr>
                 </table>

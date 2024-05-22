@@ -37,12 +37,12 @@ df = pd.read_csv(INSTITUTIONS).head(-1)
 df = df.astype("str")
 df = df.replace(["nan", ""], "not provided")
 objects = df.to_dict(orient="records")
-labels = {slugify(x): x for x in df.keys()}
+labels = {slugify(x).replace("-", "_"): x for x in df.keys()}
 df.columns = labels.keys()
 orgs = {}
 for i, x in enumerate(df.to_dict(orient="records"), start=1):
-    orgs[x["institution-name"]] = x
-    orgs[x["institution-name"]]["id"] = f"{i}"
+    orgs[x["institution_name"]] = x
+    orgs[x["institution_name"]]["id"] = f"{i}"
 
 editions_full = []
 for i, x in enumerate(editions, start=1):
