@@ -49,3 +49,9 @@ NO_FACET_FIELDS = [
     "budget-rough",
     "ride-review",
 ]
+
+NO_INDEX_FIELDS = [
+    "resolver",
+    "next",
+    "prev",
+]

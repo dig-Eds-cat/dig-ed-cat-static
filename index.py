@@ -10,6 +10,7 @@ from config import (
     MANDATORY_FIELDS,
     FACET_FIELDS,
     NO_FACET_FIELDS,
+    NO_INDEX_FIELDS,
 )
 
 from utils import (
@@ -43,6 +44,16 @@ for i, x in enumerate(df.to_dict(orient="records"), start=1):
 editions_full = []
 for i, x in enumerate(editions, start=1):
     x["id"] = f"{i}"
+    x["resolver"] = f"entry-{i:02}.html"
+    if i == 1:
+        x["prev"] = ""
+        x["next"] = f"entry-{i + 1:02}.html"
+    elif i == len(editions):
+        x["next"] = ""
+        x["prev"] = f"entry-{i - 1:02}.html"
+    else:
+        x["prev"] = f"entry-{i - 1:02}.html"
+        x["next"] = f"entry-{i + 1:02}.html"
     old_orgs = [x.strip() for x in x["institution-s"].split(";")]
     institutions = []
     for org in old_orgs:
@@ -64,7 +75,9 @@ with open("editions.json", "w") as f:
 
 print("Typesense Index")
 print(f"defining Typesense collection schema with name: {TS_SCHEMA_NAME}")
-ts_schema = make_schema(editions[0], "dig-ed-cat", MANDATORY_FIELDS, NO_FACET_FIELDS)
+ts_schema = make_schema(
+    editions[0], "dig-ed-cat", MANDATORY_FIELDS, NO_FACET_FIELDS, NO_INDEX_FIELDS
+)
 with open("schema.json", "w") as f:
     json.dump(ts_schema, f, ensure_ascii=False, indent=4)
 
