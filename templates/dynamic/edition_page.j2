@@ -29,38 +29,65 @@
         </div>
     </div>
     <div class="content">
-        <table class="table">
-            <tr>
-                <th>URL</th>
-                <td class="readmore">The project URL.</td>
-                <td><a href="{{ document_data.url}}">{{ document_data.url}}</a></td>
-            </tr>
-            <tr>
-                <th>Historical Period</th>
-                <td class="readmore">Historical period to which the source document/text belongs.</td>
-                <td>
-                    <ul>
-                        {% for x in document_data.historical_period %}
-                        <li>{{ x }}</li>
-                        {% endfor %}
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>Scholarly</th>
-                <td class="readmore">Sahle - An edition must have critical components - a pure facsimile is not an edition, a digital library is not an edition.</td>
-                <td>
-                    {{ document_data.scholarly}}
-                </td>
-            </tr>
-            <tr>
-                <th>Digital</th>
-                <td class="readmore">Sahle - A digital edition cannot be converted to a printed edition without substantial loss of content or functionality - vice versa: a retrodigitized printed edition is not a Scholarly Digital Edition (but it may evolve into a Scholarly Digital Edition through new content or functionalities).</td>
-                <td>
-                   {{ document_data.digital}}
-                </td>
-            </tr>
-        </table>
+        <div class="row">
+            <div class="col-md">
+                <table class="table">
+                    <tr>
+                        <th scope="row">URL</th>
+                        <td class="readmore">The project URL.</td>
+                        <td><a href="{{ document_data.url}}">{{ document_data.url}}</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Historical Period</th>
+                        <td class="readmore">Historical period to which the source document/text belongs.</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.historical_period %}
+                                <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Scholarly</th>
+                        <td class="readmore">Sahle - An edition must have critical components - a pure facsimile is not an edition, a digital library is not an edition.</td>
+                        <td>
+                            {{ document_data.scholarly}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Digital</th>
+                        <td class="readmore">Sahle - A digital edition cannot be converted to a printed edition without substantial loss of content or functionality - vice versa: a retrodigitized printed edition is not a Scholarly Digital Edition (but it may evolve into a Scholarly Digital Edition through new content or functionalities).</td>
+                        <td>
+                           {{ document_data.digital}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Writing support</th>
+                        <td class="readmore">The nature or materiality of the source text (manuscript, letter, notebook, etc.).</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.writing_support %}
+                                <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Language</th>
+                        <td class="readmore"> 	The language(s) of the source text (three-letter ISO codes used).</td>
+                        <td>
+                            <ul class="list-unstyled">
+                                {% for x in document_data.language %}
+                                <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md"></div>
+        </div>
     </div>
 </div>
 {% endblock content %}
