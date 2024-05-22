@@ -69,7 +69,7 @@ for i, x in enumerate(editions, start=1):
             continue
     editions_full.append(x)
 
-with open("editions.json", "w") as f:
+with open("html/editions.json", "w") as f:
     json.dump(editions_full, f, ensure_ascii=False, indent=4)
 
 
@@ -78,7 +78,7 @@ print(f"defining Typesense collection schema with name: {TS_SCHEMA_NAME}")
 ts_schema = make_schema(
     editions[0], "dig-ed-cat", MANDATORY_FIELDS, NO_FACET_FIELDS, NO_INDEX_FIELDS
 )
-with open("schema.json", "w") as f:
+with open("html/schema.json", "w") as f:
     json.dump(ts_schema, f, ensure_ascii=False, indent=4)
 
 print(f"creating Typesnses Collection with schema {TS_SCHEMA_NAME}")
