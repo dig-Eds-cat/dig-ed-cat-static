@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 from slugify import slugify
+from utils import resolve_number_codes, strip
 
 from config import (
     EDITIONS,
@@ -24,6 +25,8 @@ print(f"fetching {EDITIONS}")
 df = pd.read_csv(EDITIONS).head(-1)
 df = df.astype("str")
 df = df.replace(["nan", ""], "not provided")
+df = df.map(strip)
+df = df.map(resolve_number_codes)
 objects = df.to_dict(orient="records")
 labels = {slugify(x).replace("-", "_"): x for x in df.keys()}
 df.columns = labels.keys()

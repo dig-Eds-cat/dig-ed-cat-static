@@ -28,4 +28,6 @@ print("building document und page pages")
 for x in data:
     output_path = os.path.join("html", x["resolver"])
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write(page_template.render({"project_data": project_data, "document_data": x}))
+        f.write(
+            page_template.render({"project_data": project_data, "document_data": x})
+        )

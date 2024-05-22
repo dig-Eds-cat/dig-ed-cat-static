@@ -6,30 +6,61 @@
 
 {% block content %}
 <div class="container">
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="editions.html">Browse Editions</a></li>
-    <li class="breadcrumb-item active" aria-current="page">{{ document_data.edition_name }}</li>
-  </ol>
-</nav>
-<div class="row">
-    <div class="col-sm-3 p1">
-        {% if document_data.prev %}
-        <h1 class="text-start"><a href="{{ document_data.prev }}"><i class="bi bi-chevron-left"></i></a></h1>
-        {% endif %}
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="editions.html">Browse Editions</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ document_data.edition_name }}</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-sm-3 p1">
+            {% if document_data.prev %}
+            <h1 class="text-start"><a href="{{ document_data.prev }}"><i class="bi bi-chevron-left"></i></a></h1>
+            {% endif %}
+        </div>
+        <div class="col-sm-6 p1">
+            <h1 class="text-center">{{ document_data.edition_name }}</h1>
+        </div>
+        <div class="col-sm-3 p1">
+            {% if document_data.next %}
+            <h1 class="text-end"><a href="{{ document_data.next }}"><i class="bi bi-chevron-right"></i></a></h1>
+            {% endif %}
+        </div>
     </div>
-    <div class="col-sm-6 p1">
-        <h1 class="text-center">{{ document_data.edition_name }}</h1>
+    <div class="content">
+        <table class="table">
+            <tr>
+                <th>URL</th>
+                <td class="readmore">The project URL.</td>
+                <td><a href="{{ document_data.url}}">{{ document_data.url}}</a></td>
+            </tr>
+            <tr>
+                <th>Historical Period</th>
+                <td class="readmore">Historical period to which the source document/text belongs.</td>
+                <td>
+                    <ul>
+                        {% for x in document_data.historical_period %}
+                        <li>{{ x }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Scholarly</th>
+                <td class="readmore">Sahle - An edition must have critical components - a pure facsimile is not an edition, a digital library is not an edition.</td>
+                <td>
+                    {{ document_data.scholarly}}
+                </td>
+            </tr>
+            <tr>
+                <th>Digital</th>
+                <td class="readmore">Sahle - A digital edition cannot be converted to a printed edition without substantial loss of content or functionality - vice versa: a retrodigitized printed edition is not a Scholarly Digital Edition (but it may evolve into a Scholarly Digital Edition through new content or functionalities).</td>
+                <td>
+                   {{ document_data.digital}}
+                </td>
+            </tr>
+        </table>
     </div>
-
-    <div class="col-sm-3 p1">
-        {% if document_data.next %}
-        <h1 class="text-end"><a href="{{ document_data.next }}"><i class="bi bi-chevron-right"></i></a></h1>
-        {% endif %}
-    </div>
-</row>
-    
-   
-
+</div>
 {% endblock content %}
