@@ -41,9 +41,9 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - name: Create Index and Helper files
-        run: python index.py
+        run: python build__index.py
       - name: Build the Website
-        run: python build_static.py
+        run: python build__static.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
