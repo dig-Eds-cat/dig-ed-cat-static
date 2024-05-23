@@ -162,3 +162,5 @@ html/*.html
 secret.env
 schema.json
 editions.json
+html/editions.csv
+html/editions_decoded.csv
