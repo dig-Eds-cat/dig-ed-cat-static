@@ -375,7 +375,11 @@
                         <th scope="row">Infrastructure</th>
                         <td class="readmore">The technologies used to build the digital edition.</td>
                         <td>
-                            {{ document_data.infrastructure }}
+                            <ul class="list-unstyled">
+                                {% for x in document_data.infrastructure %}
+                                    <li>{{ x }}</li>
+                                {% endfor %}
+                            </ul>
                         </td>
                     </tr>
                     <tr>
