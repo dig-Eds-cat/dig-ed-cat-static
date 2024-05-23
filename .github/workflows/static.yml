@@ -42,7 +42,7 @@ jobs:
       - name: install requirements
         run: pip install -r requirements.txt
       - name: Build the Website
-        run: python ./build.sh
+        run: ./build.sh
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
