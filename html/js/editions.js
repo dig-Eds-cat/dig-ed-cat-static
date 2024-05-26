@@ -50,6 +50,7 @@ var table = new Tabulator("#example-table", {
     responsiveLayout: "collapse",
     columns: [
         { title: "Name", field: "edition_name", minWidth: 300, headerFilter: "input", formatter: linkToDetailView },
+        { title: "Historical Period", field: "historical_period", headerFilter: "input" },
         {
             title: "Institutions", field: "institution_s",
             ...linkListColumnSettings,
