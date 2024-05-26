@@ -1,0 +1,21 @@
+{% extends "templates/partials/base.j2" %}
+{% block title %}Browse editions{% endblock title %}
+{% block page_description %}
+<meta name="description" content="Browse the Editions via interactivate table">
+{% endblock page_description %}
+{% block scriptHeader %}
+<link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+<link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Browse the Editions</h1>
+    <h2 class="text-center">Showing <span id="counter1"></span> out of <span id="counter2"></span> Editions</h2>
+    <div id="example-table"></div>
+</div>
+{% endblock %}
+{% block scriptbody %}
+<script type="text/javascript" src="js/editions.js"></script>
+{% endblock %}
