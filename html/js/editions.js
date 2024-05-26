@@ -49,9 +49,9 @@ var table = new Tabulator("#example-table", {
     layout: "fitColumns",
     responsiveLayout: "collapse",
     columns: [
-        { title: "Name", field: "edition_name", minWidth: 400, headerFilter: "input", formatter: linkToDetailView },
+        { title: "Name", field: "edition_name", minWidth: 300, headerFilter: "input", formatter: linkToDetailView },
         {
-            title: "Institutions", field: "institution_s", minWidth: 350,
+            title: "Institutions", field: "institution_s",
             ...linkListColumnSettings,
             formatterParams: {
                 urlPrefix: '',
@@ -60,7 +60,7 @@ var table = new Tabulator("#example-table", {
             },
             headerFilterFuncParams: { nameField: 'institution_name' }
         },
-        { title: "Language", field: "language", headerFilter: "input", maxWidth: 150 },
+        { title: "Language", field: "language", headerFilter: "input", width: 150 },
         { title: "URL", field: "url", formatter: "link", headerFilter: "input" },
     ]
 });
@@ -74,6 +74,5 @@ table.on("dataLoaded", function (data) {
 
 table.on("dataFiltered", function (filters, data) {
     var el = document.getElementById("counter1");
-    console.log(data)
     el.innerHTML = `${data.length}`;
 });
