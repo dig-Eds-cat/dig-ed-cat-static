@@ -1,0 +1,22 @@
+{% extends "templates/partials/base.j2" %}
+{% block title %}News{% endblock title %}
+
+{% block page_description %}
+<meta name="description" content="Listing all news items">
+{% endblock page_description %}
+
+{% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">News</li>
+    </ol>
+</nav>
+<div class="container">
+    <h1>News</h1>
+    {% for x in news %}
+    <h3 class="ps-2 pt-2 text-success">{{ x.title }}</h3>
+    <div class="ps-3 pt-1">{{ x.body|safe }}</div>
+    {% endfor %}
+</div>
+{% endblock %}
