@@ -165,3 +165,5 @@ editions.json
 html/editions.csv
 html/editions_decoded.csv
 html/hansi.json
+hansi.*
+play.*

@@ -1,0 +1,230 @@
+[
+    {
+        "title": "January 2024",
+        "created": "2024-01-28",
+        "updated": "2024-01-28",
+        "body": "<i class=\"bi bi-plus-square\"></i> One new digital edition added (n. 337)."
+    },
+    {
+        "title": "December 2023",
+        "created": "2023-12-10",
+        "updated": "2023-12-10",
+        "body": "<i class=\"bi bi-plus-square\"></i> Twelve new user-added digital editions (n. 324-336)."
+    },
+    {
+        "title": "May 2023",
+        "created": "2023-05-21",
+        "updated": "2023-05-21",
+        "body": "<i class=\"bi bi-plus-square\"></i> Three new user-added digital editions (n. 321-323).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 361."
+    },
+    {
+        "title": "July 2022",
+        "created": "2022-07-11",
+        "updated": "2022-07-11",
+        "body": "<i class=\"bi bi-plus-square\"></i> One new user-added digital edition (n. 320).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 358."
+    },
+    {
+        "title": "March 2022",
+        "created": "2022-03-20",
+        "updated": "2022-03-20",
+        "body": "<i class=\"bi bi-plus-square\"></i> Three new user-added digital editions (n. 317, 318, 319).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 355."
+    },
+    {
+        "title": "June 2021",
+        "created": "2021-06-11",
+        "updated": "2021-06-11",
+        "body": "<i class=\"bi bi-plus-square\"></i> Three new user-added digital editions (n. 314, 315, 316).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 351."
+    },
+    {
+        "title": "December 2020",
+        "created": "2020-12-30",
+        "updated": "2020-12-30",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> Updates to institutions.<br /><i class=\"bi bi-plus-square\"></i> Two new user-added digital editions (n. 312, 313).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 343."
+    },
+    {
+        "title": "October 2020",
+        "created": "2020-10-02",
+        "updated": "2020-10-02",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> Updates to institutions.<br /><i class=\"bi bi-plus-square\"></i> One new user-added digital edition (n. 311).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 341.<br /><i class=\"bi bi-plus-square\"></i> Patrick Sahle's <i><a href=\"https://digitale-edition.de/exist/apps/editions-browser/$app/index.html\" target=\"_blank\" title=\"Opens in new tab\">Catalog of Digital Scholarly Editions</a></i> now provides direct links to our Catalogue for shared entries!"
+    },
+    {
+        "title": "August 2020",
+        "created": "2020-08-20",
+        "updated": "2020-08-20",
+        "body": "<i class=\"bi bi-plus-square\"></i> One new user-added digital edition (n. 310).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 340.<br /><i class=\"bi bi-plus-square\"></i> Generic XML renderer of the JSON data (see <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/api/editions/?format=xml\" target=\"_blank\" title=\"Opens in new tab\">https://dig-ed-cat.acdh.oeaw.ac.at/api/editions/?format=xml</a> for the complete entry list.).<br /><i class=\"bi bi-plus-square\"></i> Links to Catalogue URLs and to Handle PIDs added to the JSON data (<a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/api/editions/\" target=\"_blank\" title=\"Opens in new tab\">https://dig-ed-cat.acdh.oeaw.ac.at/api/editions/</a>) ."
+    },
+    {
+        "title": "February 2020",
+        "created": "2020-03-01",
+        "updated": "2020-03-01",
+        "body": "<i class=\"bi bi-plus-square\"></i> One new user-added digital edition (n. 309).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 336.<br />"
+    },
+    {
+        "title": "January 2020",
+        "created": "2020-01-06",
+        "updated": "2020-01-23",
+        "body": "<i class=\"bi bi-plus-square\"></i> Four new user-added digital editions (n. 305, 306, 307, 308).<br />"
+    },
+    {
+        "title": "August-September 2019",
+        "created": "2019-10-02",
+        "updated": "2019-10-02",
+        "body": "<i class=\"fa fa-sun-o\" aria-hidden=\"true\"></i> We took a break!<br /><i class=\"bi bi-plus-square\"></i> New refback (<em>Topics in DH</em>).<br /><i class=\"bi bi-plus-square\"></i> The number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 334.<br />"
+    },
+    {
+        "title": "June-July 2019",
+        "created": "2019-07-22",
+        "updated": "2019-07-22",
+        "body": "<i class=\"bi bi-plus-square\"></i> Added two refbacks."
+    },
+    {
+        "title": "April 2019",
+        "created": "2019-04-20",
+        "updated": "2019-04-20",
+        "body": "<i class=\"bi bi-plus-square\"></i> One new user-added digital edition (n. 304).<br /><i class=\"bi bi-plus-square\"></i> the number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 333.<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> Bug fixes and removal of the Google+ sharing option due to Google's discontinuation of the service."
+    },
+    {
+        "title": "February 2019",
+        "created": "2019-03-11",
+        "updated": "2019-03-11",
+        "body": "<i class=\"fa fa-file-text\" aria-hidden=\"true\"></i> We published an article in the <em>ACM Journal on Computing and Cultural Heritage (JOCCH)</em> entitled 'Digital Editions of Text: Surveying User Requirements in the Digital Humanities'! The article is available <a href=\"https://dl.acm.org/citation.cfm?doid=3230671\" target=\"_blank\" title=\"Opens in new tab\">HERE</a>."
+    },
+    {
+        "title": "January 2019",
+        "created": "2019-02-02",
+        "updated": "2019-02-02",
+        "body": "<i class=\"bi bi-plus-square\"></i> Two new user-added digital editions (n. 302 & 303).<br /><i class=\"bi bi-plus-square\"></i> the number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 332."
+    },
+    {
+        "title": "November-December 2018",
+        "created": "2018-12-18",
+        "updated": "2018-12-18",
+        "body": "<i class=\"bi bi-plus-square\"></i> Two new user-added digital editions (n. 300 & 301)."
+    },
+    {
+        "title": "October 2018",
+        "created": "2018-10-29",
+        "updated": "2018-10-29",
+        "body": "<i class=\"bi bi-plus-square\"></i> Two new user-added digital editions (n. 298 & 299)."
+    },
+    {
+        "title": "August 2018",
+        "created": "2018-09-07",
+        "updated": "2018-09-07",
+        "body": "<i class=\"bi bi-plus-square\"></i> We added a digital edition (n. 297);<br /><i class=\"fa fa-sun-o\" aria-hidden=\"true\"></i> we took a break!"
+    },
+    {
+        "title": "July 2018",
+        "created": "2018-07-30",
+        "updated": "2018-07-30",
+        "body": "<i class=\"bi bi-plus-square\"></i> Users of the Catalogue added a total of 7 new digital editions!<br /><i class=\"bi bi-plus-square\"></i> User and collaborator Szilvia Maróthy created and maintains a <a href=\"https://www.zotero.org/groups/2199751/digital_scholarly_editions\" target=\"\" title=\"Opens in new tab\">Zotero group</a> to collect digital editions in the Catalogue that are marked as <em>scholarly</em> (see also the Zotero icon in the footer of this website);<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated our documentation."
+    },
+    {
+        "title": "June 2018",
+        "created": "2018-07-02",
+        "updated": "2018-07-02",
+        "body": "<i class=\"bi bi-plus-square\"></i> All entries in the Catalogue of Digital Editions now have stable <a href=\"http://handle.net/\" target=\"_blank\" title=\"Opens in new tab\">Handle.net</a> identifiers. To cite an entry, look for the handle at the bottom of the corresponding project sheet."
+    },
+    {
+        "title": "May 2018",
+        "created": "2018-06-02",
+        "updated": "2018-06-02",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> We've been experimenting with <a href=\"http://d2rq.org/\" target=\"_blank\" title=\"Opens in new tab\">d2rq</a>;<br /><i class=\"bi bi-mortarboard\" aria-hidden=\"true\"></i> we presented the Catalogue at the MWW/DARIAH-DE expert workshop entitled \"Suchtechnologien\";<br /><i class=\"bi bi-plus-square\"></i> the number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 328."
+    },
+    {
+        "title": "April 2018",
+        "created": "2018-04-28",
+        "updated": "2018-04-28",
+        "body": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Szilvia Maróthy from ELTE University added 27 digital editions from Hungary!<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated existing digital editions and did some general spring cleaning;<br /><i class=\"bi bi-plus-square\"></i> the number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 327."
+    },
+    {
+        "title": "March 2018",
+        "created": "2018-03-29",
+        "updated": "2018-03-30",
+        "body": "<i class=\"bi bi-mortarboard\" aria-hidden=\"true\"></i> We were invited to present the Catalogue at an upcoming MWW/DARIAH-DE Workshop entitled \"Suchtechnologien\", which will take place in Weimar on 25th May 2018;<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> Greta gave <a href=\"http://www.filosofia.rai.it/speciale/conferenza-aiudc-bari-31-gennaio-2-febbraio-2018/2008/40392/default.aspx\" target=\"_blank\" title=\"Opens in new tab\">an interview</a> about the Catalogue of Digital Editions on Italian national television (RAI Cultura) [interview is in Italian];<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated existing digital editions;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated outdated screenshots in the Documentation;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added two digital editions;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>  we added an <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/rss/feeds/\">RSS feed</a> for the News section for those who wish to receive the latest updates from the project;<br /><i class=\"bi bi-plus-square\"></i> the number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 326."
+    },
+    {
+        "title": "February 2018",
+        "created": "2018-02-25",
+        "updated": "2018-03-20",
+        "body": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> Our Expectations of Digital (Textual) Editions survey paper was accepted for publication in the <a href=\"https://jocch.acm.org/\" target=\"_blank\" title=\"Opens in new tab\">ACM Journal on Computing and Cultural Heritage</a>!<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> our data is now <a href=\"https://www.openaire.eu/search/dataset?datasetId=r37b0ad08687::c2ad7b8b5225d5abc748a1c6bbb07aeb\" target=\"_blank\" title=\"Opens in new tab\">indexed in OpenAIRE</a>;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added more digital editions;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added network visualisations of each project and of the <a href=\"https://dig-ed-cat.eos.arz.oeaw.ac.at/browsing/netvis/\" title=\"Opens in new tab\" target=\"_blank\">entire Catalogue data-set</a>;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added individual web-pages for institutions (currently accessible by clicking on institution nodes in the individual network visualisations);<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updates the layout of our homepage, including the footer;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated existing digital editions;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we fixed a few bugs;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we added missing DNB IDs and cleaned up duplicate institutions;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated our <a href=\"https://dig-ed-cat.eos.arz.oeaw.ac.at/output/\" target=\"_blank\" title=\"Opens in new tab\">Output</a> page with more refbacks;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated our <a href=\"https://dig-ed-cat.eos.arz.oeaw.ac.at/documentation/\" target=\"_blank\" title=\"Opens in new tab\">Documentation</a> page;<br /><i class=\"bi bi-plus-square\"></i> the number of German libraries subscribing to the <a href=\"http://dbis.uni-regensburg.de//index.php?bib_id=alle&colors=3&ocolors=40&ref=about\" target=\"_blank\" title=\"Opens in new tab\">DBIS service</a>, which syndicates the Catalogue, is now 325."
+    },
+    {
+        "title": "January 2018",
+        "created": "2018-01-27",
+        "updated": "2018-01-27",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> We updated existing editions;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we fixed a few bugs in geographical coordinates and institution URLs; <br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added more digital editions;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the GitHub data repository can now be more easily cited using the following Zenodo DOI: <a href=\"https://zenodo.org/badge/latestdoi/42574907\"><img src=\"https://zenodo.org/badge/42574907.svg\" alt=\"DOI\"></a>"
+    },
+    {
+        "title": "December 2017",
+        "created": "2018-01-01",
+        "updated": "2018-01-01",
+        "body": "<i class=\"bi bi-mortarboard\" aria-hidden=\"true\"></i> We presented a <a href=\"https://www.researchgate.net/publication/321540456_Catalogue_of_Digital_Editions_A_web_application_to_browse_curate_and_analyse_digital_editions?channel=doi&linkId=5a26d60faca2727dd88398a5&showFulltext=true\" target=\"_blank\" title=\"Opens in new tab\">poster</a> at the DH Austria conference;<br /><i class=\"fa fa-tree\" aria-hidden=\"true\"></i> Christmas break!"
+    },
+    {
+        "title": "November 2017",
+        "created": "2017-12-02",
+        "updated": "2018-02-04",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> We updated the documentation and the output page, which includes an article by the Digital Publications Manager of The J. Paul Getty Trust, Greg Albers, who <a href=\"https://mw17.mwconf.org/paper/the-next-generation-of-online-publishing-building-on-what-weve-learned-together/\" target=\"_blank\" title=\"Opens in new tab\">dedicates a paragraph to the Catalogue</a>."
+    },
+    {
+        "title": "October 2017",
+        "created": "2017-10-12",
+        "updated": "2017-10-28",
+        "body": "<i class=\"bi bi-mortarboard\" aria-hidden=\"true\"></i> Our poster submission to <a href=\"https://www.uibk.ac.at/congress/dha2017/\" target=\"_blank\" title=\"Opens in new tab\">DHAustria 2017</a> was accepted. See you in Innsbruck in December!<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> We submitted an article describing the results of our March survey 'Expectations of Digital (Textual) Editions' to a journal."
+    },
+    {
+        "title": "September 2017",
+        "created": "2017-09-01",
+        "updated": "2017-09-22",
+        "body": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> We added the new filtering option 'Sahle Catalog' to map the entries in the <em>Catalogue</em> against those present in Patrick Sahle's <em><a href=\"http://www.digitale-edition.de\" target=\"_blank\" title=\"Opens in new tab\">Catalog of Digital Scholarly Editions</a></em>;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we created a <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/404-error.html\" target=\"_blank\" title=\"Opens in new tab\">404 error page</a>;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added a <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/charts/chartselector/\">data-chart selector</a> system;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we created a BibTeX download of all digital editions (see the <em>Get the Data</em> menu tab), which, among other things, allows users to import all digital editions into bibliographic managers such as Zotero;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we created an N3 and RDF/XML download of all digital editions (see the <em>Get the Data</em> menu tab) - the vocabularies used are FOAF, GeoNames, Data Catalog and Dublin Core Metadata;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added a <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/sparql/query/\">SPARQL interface</a> to query the RDF data format of the <em>Catalogue</em>;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added more digital editions;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we freshened-up the look of some pages;<br /><i class=\"bi bi-mortarboard\" aria-hidden=\"true\"></i> we were invited to present the project at the <a href=\"http://isig.fbk.eu/\" target=\"_blank\" title=\"Opens in new tab\">German-Italian Historical Institute in Trento</a>, Italy."
+    },
+    {
+        "title": "August 2017",
+        "created": "2017-08-14",
+        "updated": "2017-09-13",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> We updated the <a href=\"https://dig-ed-cat.eos.arz.oeaw.ac.at/faq/\">FAQ</a> page with project criteria for inclusion in the <em>Catalogue</em>;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated the <a href=\"https://dig-ed-cat.eos.arz.oeaw.ac.at/output/\">Refbacks</a> section with two new entries;<br /><i class=\"fa fa-sun-o\" aria-hidden=\"true\"></i> we took a break!"
+    },
+    {
+        "title": "July 2017",
+        "created": "2017-07-12",
+        "updated": "2017-07-31",
+        "body": "<i class=\"fa fa-beer\" aria-hidden=\"true\"></i> <strong>We celebrate our 1st birthday!</strong><br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated existing data;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added the 'Repository of Source Material(s)' field to the individual project sheets;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added an <a href=\"output/\">Output</a> page to showcase our research output and visibility in one place;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added more submissions from users;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added a bulk-download button <i class=\"glyphicon glyphicon-download-alt\" aria-hidden=\"true\"></i> to the <a href=\"browsing/editions/\">Browse Editions</a> page.<br />"
+    },
+    {
+        "title": "June 2017",
+        "created": "2017-06-25",
+        "updated": "2017-07-16",
+        "body": "<i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> This month we released a revamped, more spacious homepage;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we added a new 'Navigating the Web Application' section to the <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/documentation/\">Documentation</a>;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated the location pop-ups in map view to include more information;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updated existing data;<br /><i class=\"bi bi-pencil-square\" aria-hidden=\"true\"></i> we updatedour favicon (to view it, add this site to your browser's bookmarks baror to your <a href=\"https://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-md/\"target=\"_blank\" title=\"Opens in new tab\">mobile device's home screen</a>);<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added the 'Budget' field to the individual project sheets so that you can also learn more about their financial resources;<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> we added a 'Report' button in project sheets for you to easily communicate issues and updates;<br /><i class=\"fa fa-users\" aria-hidden=\"true\"></i> we're in the processof analysing and writing up the results of the <a href=\"https://dig-ed-cat.acdh.oeaw.ac.at/survey2017/\"title=\"Opens here\">'Expectations of Digital (Textual) Editions'</a> survey, which recorded 218 complete responses!<br /><i class=\"fa fa-globe\" aria-hidden=\"true\"></i> Finally, the <em>Digital Latin Library</em> mentionedus in their most recent <a href=\"http://digitallatin.org/blog/library-digital-latin-texts-ldlt\"title=\"Opens in new tab\" target=\"_blank\">blogpost</a>."
+    },
+    {
+        "title": "May 2017",
+        "created": "2017-06-02",
+        "updated": "2017-06-25",
+        "body": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> The <em>Catalogue of Digital Editions</em> links projects, where possible, to reviews published by the <em><a href=\"http://ride.i-d-e.de/\" target=\"_blank\" title=\"Opens in new tab\">RIDE Review Journal of Scholarly Digital Editions and Resources</a></em>.<br /><i class=\"fa fa-globe\" aria-hidden=\"true\"></i> We were featured in <a href=\"http://karelsykora.blog.idnes.cz/blog.aspx?c=606254\" target=\"_blank\" title=\"Opens in new tab\">iDNES.cz</a>, a Czech online news portal."
+    },
+    {
+        "title": "April 2017",
+        "created": "2017-06-02",
+        "updated": "2017-08-19",
+        "body": "<i class=\"fa fa-university\" aria-hidden=\"true\"></i> The <em>Catalogue of Digital Editions</em> was added to the German Datenbank-Infosystem (DBIS) for use in 319 libraries. DBIS was established at the University of Regensburg and is jointly funded by the Bavarian Ministry of Science, Research and the Arts and the German Research Foundation (DFG). More information available <a href=\"http://rzblx10.uni-regensburg.de/dbinfo/detail.php?bib_id=allefreien&colors=&ocolors=&lett=k&tid=0&titel_id=102043\" title=\"Opens in new tab\" target=\"_blank\">here</a>."
+    },
+    {
+        "title": "March 2017",
+        "created": "2017-06-02",
+        "updated": "2017-07-16",
+        "body": "<i class=\"fa fa-users\" aria-hidden=\"true\"></i> A survey entitled '<a href=\"https://opinio.ucl.ac.uk/s?s=48797\" target=\"_blank\" title=\"Opens in new tab\">Expectations of Digital (Textual) Editions</a>' is collecting information from the community about the needs of those who use digital editions. The results of the survey and details on how to cite it will be made available here.<br /><i class=\"fa fa-globe\" aria-hidden=\"true\"></i> The Medialab at the University of Granada mentioned us in their blogpost <a href=\"http://medialab.ugr.es/noticias/los-mejores-proyectos-de-humanidades-digitales-de-2016/\" target=\"_blank\" title=\"Opens in new tab\"><em>Los mejores proyectos de Humanidades Digitales de 2016</em></a>."
+    },
+    {
+        "title": "February 2017",
+        "created": "2017-06-02",
+        "updated": "2017-06-25",
+        "body": "<i class=\"bi bi-trophy\" aria-hidden=\"true\"></i> The <em>Catalogue of Digital Editions</em> won third place in the <a href=\"http://dhawards.org/dhawards2016/results/\">DH Awards 2016 Best DH Data Visualization category</a>."
+    },
+    {
+        "title": "September 2016",
+        "created": "2017-06-02",
+        "updated": "2017-06-25",
+        "body": "<i class=\"bi bi-mortarboard\" aria-hidden=\"true\"></i> The <em>Catalogue of Digital Editions</em> team presented the project at the 2016 TEI Conference in Vienna. Details about the conference and the book of abstracts are available <a href=\"https://tei2016app.acdh.oeaw.ac.at/pages/index.html\" target=\"_blank\" title=\"Opens in new tab\">here</a>. The project poster can be viewed <a href=\"http://tei2016.acdh.oeaw.ac.at/sites/default/files/Greta%20Franzini%2C%20Peter%20Andorfer%20The%20Digital%20Editions%20Catalogue%20App%20A%20web%20application%20to%20browse%2C%20curate%20and%20analyze%20digital%20editions.pdf\" target=\"_blank\" title=\"Opens in new tab\">here</a>."
+    }
+]

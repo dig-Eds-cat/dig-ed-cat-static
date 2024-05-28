@@ -27,6 +27,11 @@ for x in glob.glob(f"{out_dir}/*.html"):
 
 files = glob.glob("./templates/static/*.j2")
 
+NEWS_DATA = os.path.join(out_dir, "data", "news.json")
+
+with open(NEWS_DATA, "r") as f:
+    news = json.load(f)
+
 print("building static content")
 for x in files:
     print(x)
@@ -35,4 +40,4 @@ for x in files:
     print(f"rendering {tail}")
     output_path = os.path.join("html", tail.replace(".j2", ".html"))
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write(template.render({"project_data": project_data}))
+        f.write(template.render({"project_data": project_data, "news": news}))
