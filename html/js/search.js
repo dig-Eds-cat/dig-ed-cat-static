@@ -33,13 +33,10 @@ const searchClient = typesenseInstantsearchAdapter.searchClient;
 const search = instantsearch({
     searchClient,
     indexName: project_collection_name,
-<<<<<<< HEAD
-=======
     routing: {
         router: instantsearch.routers.history(),
         stateMapping: instantsearch.stateMappings.simple(),
       },
->>>>>>> 13-add-search-interface
 });
 
 search.addWidgets([
