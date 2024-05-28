@@ -1,6 +1,17 @@
 {% extends "templates/partials/base.j2" %}
+{% block title %}FAQ{% endblock title %}
+
+{% block page_description %}
+<meta name="description" content="Frequently Asked Questions (FAQ)">
+{% endblock page_description %}
 
 {% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+    </ol>
+</nav>
 <div class="container">
 
 

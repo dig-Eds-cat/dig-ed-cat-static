@@ -1,6 +1,16 @@
 {% extends "templates/partials/base.j2" %}
+{% block title %}Documentation{% endblock title %}
+{% block page_description %}
+<meta name="description" content="Contains information about Dig-Ed-Cat, the Web-App and its data.">
+{% endblock page_description %}
 {% block content %}
 
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Documentation</li>
+    </ol>
+</nav>
 <div class="container">
 
     <h1>Documentation</h1>

@@ -5,14 +5,15 @@
 {% endblock page_description %}
 
 {% block content %}
-<div class="container">
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item"><a href="editions.html">Browse Editions</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ document_data.edition_name }}</li>
         </ol>
     </nav>
+<div class="container">
+    
     <div class="row">
         <div class="col-sm-3 p1">
             {% if document_data.prev %}

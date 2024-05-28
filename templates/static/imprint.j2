@@ -1,16 +1,24 @@
 {% extends "templates/partials/base.j2" %}
-{% block title %}Impressum{% endblock title %}
+
+{% block title %}Imprint{% endblock title %}
+
 {% block page_description %}
-<meta name="description" content="Impressum">
+<meta name="description" content="Imprint">
 {% endblock page_description %}
 
 {% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Imprint</li>
+    </ol>
+</nav>
 <div class="container pt-3">
     
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h1 class="text-center pb-2">Impressum</h1>
+            <h1 class="text-center pb-2">Imprint</h1>
             {{ project_data.imprint|safe}}
         </div>
         <div class="col-md-2"></div>

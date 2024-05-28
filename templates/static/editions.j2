@@ -1,8 +1,10 @@
 {% extends "templates/partials/base.j2" %}
 {% block title %}Browse editions{% endblock title %}
+
 {% block page_description %}
 <meta name="description" content="Browse the Editions via interactivate table">
 {% endblock page_description %}
+
 {% block scriptHeader %}
 <link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css" rel="stylesheet">
 <link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator_bootstrap5.min.css" rel="stylesheet">
@@ -10,6 +12,12 @@
 {% endblock %}
 
 {% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Browse Editions</li>
+    </ol>
+</nav>
 <div class="container">
     <h1>Browse the Editions</h1>
     <h2 class="text-center">Showing <span id="counter1"></span> out of <span id="counter2"></span> Editions</h2>
