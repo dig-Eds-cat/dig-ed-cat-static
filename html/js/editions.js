@@ -43,7 +43,7 @@ function linkListFormatter(cell, formatterParams, onRendered) {
 }
 
 var table = new Tabulator("#example-table", {
-    ajaxURL: "editions.json",
+    ajaxURL: "data/editions.json",
     height: "800",
     width: "800",
     layout: "fitColumns",
