@@ -63,7 +63,7 @@ search.addWidgets([
                 return html` 
             <h3><a href="${hit.resolver}">${hit.edition_name}</a></h3>
             <p>${hit.manager_or_editor.map((item) => html`<span class="badge rounded-pill m-1 bg-success">${item}</span>`)}</p>
-            <p>${hit.institution_s.map((item) => html`<a href='${item.id}'><span class="badge rounded-pill m-1 bg-danger">${item.institution_name}</span></a>`)}</p>`;
+            <p>${hit.institution_s.map((item) => html`<a href='${item.resolver}'><span class="badge rounded-pill m-1 bg-danger">${item.institution_name}</span></a>`)}</p>`;
             },
         },
     }),

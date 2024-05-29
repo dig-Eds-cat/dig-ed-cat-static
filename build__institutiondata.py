@@ -13,7 +13,6 @@ for x in data:
 for x in data:
     for y in x["institution_s"]:
         inst_id = y["id"]
-        institutions[inst_id]["resolver"] = f"institution-{int(inst_id):03}.html"
         institutions[inst_id]["editions"].append(
             {"edition_name": x["edition_name"], "edition_resolver": x["resolver"]}
         )

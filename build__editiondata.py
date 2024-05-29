@@ -35,6 +35,7 @@ orgs = {}
 for i, x in enumerate(df.to_dict(orient="records"), start=1):
     orgs[x["institution_name"]] = x
     orgs[x["institution_name"]]["id"] = f"{i}"
+    orgs[x["institution_name"]]["resolver"] = f"institution-{i:03}.html"
 
 editions_full = []
 for i, x in enumerate(editions, start=1):
