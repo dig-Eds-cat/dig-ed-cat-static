@@ -167,3 +167,7 @@ html/editions_decoded.csv
 html/hansi.json
 hansi.*
 play.*
+html/institutions.json
+html/data/editions_decoded.csv
+html/data/editions.csv
+html/data/institutions.json

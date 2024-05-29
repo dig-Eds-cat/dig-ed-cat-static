@@ -15,7 +15,7 @@ from utils import (
 
 print("hallo, lets start indexing")
 
-with open("./html/editions.json", "r") as f:
+with open("./html/data/editions.json", "r") as f:
     editions_full = json.load(f)
 print("Typesense Index")
 print(f"defining Typesense collection schema with name: {TS_SCHEMA_NAME}")
