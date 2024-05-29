@@ -32,6 +32,8 @@ jobs:
       TYPESENSE_PORT: 443
       TYPESENSE_PROTOCOL: https
       TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
+      HANDLE_USERNAME: ${{secrets.HANDLE_USERNAME}}
+      HANDLE_PASSWORD: ${{secrets.HANDLE_PASSWORD}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
