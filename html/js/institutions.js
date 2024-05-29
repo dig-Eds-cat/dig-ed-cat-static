@@ -43,7 +43,7 @@ function linkListFormatter(cell, formatterParams, onRendered) {
 }
 
 var table = new Tabulator("#example-table", {
-    ajaxURL: "institutions.json",
+    ajaxURL: "data/institutions.json",
     height: "800",
     width: "800",
     layout: "fitColumns",
@@ -51,6 +51,7 @@ var table = new Tabulator("#example-table", {
     columns: [
         { title: "Name", field: "institution_name", minWidth: 300, headerFilter: "input", formatter: linkToDetailView },
         { title: "Country", field: "part_of", headerFilter: "input" },
+        { title: "Editions", field: "edition_counter", headerFilter: "input" },
     ]
 });
 
