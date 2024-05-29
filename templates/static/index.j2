@@ -1,8 +1,12 @@
 {% extends "templates/partials/base.j2" %}
 {% block content %}
     <div class="index-wrapper container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            The <a href="https://github.com/acdh-oeaw/dig_ed_cat/issues/244">old application</a> has reached its end of life. The new application (this one) is currently still under development.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
         <div class="card">
-            <img src="img/DigEds_Cat_logo_transp.png" class="img-responsive" alt="logo" id="index-picture">
+            <img src="img/DigEds_Cat_logo_transp.png" class="img-responsive" alt="logo">
             <div class="pt-4 pb-3 text-end"><button class="btn btn-outline-secondary"><a href="editions.html" title="Click HERE to browse the editions or select an option from the black menu bar above" class="fs-3"><i class="bi bi-chevron-right"></i> explore the catalogue</a></button></div>
         </div>
 
