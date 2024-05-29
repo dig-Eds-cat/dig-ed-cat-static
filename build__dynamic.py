@@ -13,7 +13,7 @@ with open("project.json", "r", encoding="utf-8") as f:
 print("#########################")
 print("building edition pages")
 
-with open("./html/editions.json", "r", encoding="utf-8") as f:
+with open("./html/data/editions.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 os.makedirs(out_dir, exist_ok=True)
@@ -29,7 +29,7 @@ for x in data:
 print("#########################")
 print("building institution pages")
 
-with open("./html/institutions.json", "r", encoding="utf-8") as f:
+with open("./html/data/institutions.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 os.makedirs(out_dir, exist_ok=True)

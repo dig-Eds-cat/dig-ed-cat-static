@@ -9,16 +9,16 @@ from config import (
     FACET_FIELDS,
 )
 
-print("hallo, lets create html/editionsjson.")
+print("hallo, lets create html/data/editionsjson.")
 
 print(f"fetching {EDITIONS}")
 df = pd.read_csv(EDITIONS).head(-1)
 df = df.astype("str")
 df = df.replace(["nan", ""], "not provided")
-df.to_csv("html/editions.csv", index=False)
+df.to_csv("html/data/editions.csv", index=False)
 df = df.map(strip)
 df = df.map(resolve_number_codes)
-df.to_csv("html/editions_decoded.csv", index=False)
+df.to_csv("html/data/editions_decoded.csv", index=False)
 objects = df.to_dict(orient="records")
 labels = {slugify(x).replace("-", "_"): x for x in df.keys()}
 df.columns = labels.keys()
@@ -64,5 +64,5 @@ for i, x in enumerate(editions, start=1):
             continue
     editions_full.append(x)
 
-with open("html/editions.json", "w") as f:
+with open("html/data/editions.json", "w") as f:
     json.dump(editions_full, f, ensure_ascii=False, indent=4)

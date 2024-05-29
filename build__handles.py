@@ -3,7 +3,7 @@ import os
 from acdh_handle_pyutils.client import HandleClient
 
 BASE_URL = "https://dig-ed-cat.acdh.oeaw.ac.at/"
-with open("html/editions.json", "r") as f:
+with open("html/data/editions.json", "r") as f:
     data = json.load(f)
 client = HandleClient(
     os.environ.get("HANDLE_USERNAME"), os.environ.get("HANDLE_PASSWORD")
@@ -29,5 +29,5 @@ for x in data:
         new_handle = client.register_handle(new_url, full_url=False)
         x["handle_pid"] = new_handle
 
-with open("html/editions.json", "w") as f:
+with open("html/data/editions.json", "w") as f:
     data = json.dump(data, f, ensure_ascii=True, indent=4)
