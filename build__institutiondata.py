@@ -17,6 +17,7 @@ for x in data:
         institutions[inst_id]["editions"].append(
             {"edition_name": x["edition_name"], "edition_resolver": x["resolver"]}
         )
+
 with open("./html/institutions.json", "w", encoding="utf-8") as f:
     json.dump(
         [value for _, value in institutions.items()], f, ensure_ascii=False, indent=4

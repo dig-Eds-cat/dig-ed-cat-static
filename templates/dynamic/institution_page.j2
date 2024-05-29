@@ -1,0 +1,64 @@
+{% extends "templates/partials/base.j2" %}
+{% block title %}{{ document_data.institution_name }}{% endblock title %}
+{% block page_description %}
+<meta name="description" content="Information about {{ document_data.institution_name}}">
+{% endblock page_description %}
+
+{% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="institutions.html">Browse Institutions</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ document_data.institution_name }}</li>
+        </ol>
+    </nav>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-sm-3 p1">
+        </div>
+        <div class="col-sm-6 p1 text-center">
+            <h1>{{ document_data.institution_name }}</h1>
+        </div>
+        <div class="col-sm-3 p1">
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="col-md">
+                <table class="table">
+                    <tr>
+                        <th scope="row">Institution's Website</th>
+                        <td><a href="{{ document_data.url}}">{{ document_data.institution_website}}</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            associated Editions
+                        </th>
+                        <td>
+                            <ul class="list-unstyled"">
+                                {% for x in document_data.editions %}
+                                <li>
+                                    <a href="{{ x.edition_resolver }}" title="go to detail view of {{ x.edition_name }}">{{ x.edition_name }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">located in</th>
+                        <td>{{ document_data.part_of }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">GND</th>
+                        <td><a href="{{ document_data.institution_gnd }}" title="linkt to GND entry">{{ document_data.institution_gnd }}</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md">
+               
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
