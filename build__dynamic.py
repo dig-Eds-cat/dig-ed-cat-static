@@ -16,13 +16,6 @@ with open("./html/editions.json", "r", encoding="utf-8") as f:
 
 os.makedirs(out_dir, exist_ok=True)
 page_template = templateEnv.get_template("./templates/dynamic/edition_page.j2")
-# browse_template = templateEnv.get_template("./templates/dynamic/browse.j2")
-
-# print("render browse.html")
-# output_path = os.path.join("html", "browse.html")
-# with open(output_path, "w", encoding="utf-8") as f:
-#     f.write(browse_template.render({"project_data": project_data, "browse_data": data}))
-
 
 print("building document und page pages")
 for x in data:
