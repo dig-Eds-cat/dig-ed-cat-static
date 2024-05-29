@@ -31,7 +31,7 @@ function linkListFormatter(cell, formatterParams, onRendered) {
     let output = value
         .map(item => {
             return `<li><a href="${formatterParams.urlPrefix}${item[formatterParams.idField]
-                }.html">${item[formatterParams.nameField]}</a></li>`
+                }">${item[formatterParams.nameField]}</a></li>`
         })
         .join(' ')
     output = `<ul>${output}</ul>`
@@ -56,7 +56,7 @@ var table = new Tabulator("#example-table", {
             ...linkListColumnSettings,
             formatterParams: {
                 urlPrefix: '',
-                idField: 'id',
+                idField: 'resolver',
                 nameField: 'institution_name'
             },
             headerFilterFuncParams: { nameField: 'institution_name' }
