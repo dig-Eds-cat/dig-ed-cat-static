@@ -19,15 +19,15 @@ data.forEach(element => {
     var lat = Number(element.institution_lat);
     var lng = Number(element.institution_lng);
     var label = element.institution_name
-    const editionsList = element.editions.map(item => `<li>${item.edition_name}</li>`).join('');
+    const editionsList = element.editions.map(item => `<li><a href="${item.edition_resolver}">${item.edition_name}</a></li>`).join('');
     var popUp = `<h5 class="text-center">${label}</h5>
     <h6><a href="${element.institution_website}">${element.institution_website}</a></h6>
     <ul>${editionsList}</ul>`
     if (lat) {
-        var marker = L.marker([lat, lng], {alt: label}).bindPopup(popUp);
+        var marker = L.marker([lat, lng], { alt: label }).bindPopup(popUp);
         markers.addLayer(marker);
     }
-    
+
 });
 map.addLayer(markers);
 map.fitBounds(markers.getBounds())
