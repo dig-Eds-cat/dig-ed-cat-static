@@ -3,6 +3,14 @@
 {% block page_description %}
 <meta name="description" content="whatever">
 {% endblock page_description %}
+{% block scriptHeader %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+{% endblock %}
+
 
 {% block content %}
 <nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -421,7 +429,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-md"></div>
+            <div class="col-md">
+                <div id="map" class="detail_view_map"/>
+            </div>
         </div>
         <div class="pt-2">
             <p class="text-center"><small>To cite this Catalogue entry, you can adapt the following</small></p>
@@ -452,3 +462,32 @@
     });
 </script>
 {% endblock content %}
+{% block scriptbody %}
+{% if document_data.institution_s %}
+<script>
+    const map = L.map('map').setView([0, 0], 3);
+    
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+    var markers = L.markerClusterGroup();
+    {% for x in document_data.institution_s %}
+    var label = "{{ x.institution_name }}";
+	markers.addLayer(L.marker([{{x.location_lat}}, {{x.location_lng}}], {alt: label}).bindPopup('<a href="{{x.resolver}}">`${label}`</a>'));
+    {% endfor %}
+
+    map.addLayer(markers);
+    
+    {% if document_data.institution_s|length > 1 %}
+    map.fitBounds(markers.getBounds())
+    {% elif  document_data.institution_s|length == 1 %}
+    {% with institution=document_data.institution_s|first %}
+    map.setView([{{ institution.location_lat }}, {{institution.location_lng}}], 7)
+    {% endwith %}
+    {% else %}
+    {% endif%}
+</script>
+{% endif %}
+{% endblock %}
