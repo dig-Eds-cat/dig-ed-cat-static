@@ -7,7 +7,6 @@ try {
 }
 const data = window.__MY_DATA
 
-console.log(data)
 const map = L.map('map').setView([0, 0], 3);
 const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
