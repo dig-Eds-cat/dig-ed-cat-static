@@ -441,26 +441,6 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-        // Hide all <td> elements with class 'readmore'
-        var readmoreElements = document.querySelectorAll('td.readmore');
-        readmoreElements.forEach(function (element) {
-            element.style.display = 'none';
-        });
-    });
-
-    document.getElementById('clickme').addEventListener('click', function () {
-        var readmoreElements = document.querySelectorAll('td.readmore');
-        readmoreElements.forEach(function (element) {
-            if (element.style.display === 'none') {
-                element.style.display = 'table-cell'; // or 'block' depending on your layout
-            } else {
-                element.style.display = 'none';
-            }
-        });
-    });
-</script>
 {% endblock content %}
 {% block scriptbody %}
 {% if document_data.institution_s %}
@@ -488,6 +468,26 @@
     {% endwith %}
     {% else %}
     {% endif%}
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        // Hide all <td> elements with class 'readmore'
+        var readmoreElements = document.querySelectorAll('td.readmore');
+        readmoreElements.forEach(function (element) {
+            element.style.display = 'none';
+        });
+    });
+
+    document.getElementById('clickme').addEventListener('click', function () {
+        var readmoreElements = document.querySelectorAll('td.readmore');
+        readmoreElements.forEach(function (element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'table-cell'; // or 'block' depending on your layout
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    });
 </script>
 {% endif %}
 {% endblock %}
