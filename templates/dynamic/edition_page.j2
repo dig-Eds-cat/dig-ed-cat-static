@@ -3,6 +3,10 @@
 {% block page_description %}
 <meta name="description" content="whatever">
 {% endblock page_description %}
+{% block scriptHeader %}
+{% include 'templates/partials/leaflet.j2' %}
+{% endblock %}
+
 
 {% block content %}
 <nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -421,7 +425,9 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-md"></div>
+            <div class="col-md">
+                <div id="map" class="detail_view_map"/>
+            </div>
         </div>
         <div class="pt-2">
             <p class="text-center"><small>To cite this Catalogue entry, you can adapt the following</small></p>
@@ -431,7 +437,38 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
+{% endblock content %}
+{% block scriptbody %}
+{% if document_data.institution_s %}
+<script>
+    const map = L.map('map').setView([0, 0], 3);
+    
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+    var markers = L.markerClusterGroup();
+    {% for x in document_data.institution_s %}
+    var label = "{{ x.institution_name }}";
+    var lat = {{ x.location_lat }};
+    var lng = {{ x.location_lng }};
+    var resolver = "{{ x.resolver }}";
+	markers.addLayer(L.marker([lat, lng], {alt: label}).bindPopup(`<a href="${resolver}">${label}</a>`));
+    {% endfor %}
+
+    map.addLayer(markers);
+    
+    {% if document_data.institution_s|length > 1 %}
+    map.fitBounds(markers.getBounds())
+    {% elif document_data.institution_s|length == 1 %}
+    {% with institution=document_data.institution_s|first %}
+    map.setView([{{ institution.location_lat }}, {{institution.location_lng}}], 7)
+    {% endwith %}
+    {% else %}
+    {% endif%}
+</script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
         // Hide all <td> elements with class 'readmore'
         var readmoreElements = document.querySelectorAll('td.readmore');
@@ -451,4 +488,5 @@
         });
     });
 </script>
-{% endblock content %}
+{% endif %}
+{% endblock scriptbody%}

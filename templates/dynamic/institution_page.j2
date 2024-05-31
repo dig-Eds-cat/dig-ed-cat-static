@@ -3,17 +3,21 @@
 {% block page_description %}
 <meta name="description" content="Information about {{ document_data.institution_name}}">
 {% endblock page_description %}
+{% block scriptHeader %}
+{% include 'templates/partials/leaflet.j2' %}
+{% endblock %}
+
 
 {% block content %}
 <nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="institutions.html">Browse Institutions</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ document_data.institution_name }}</li>
-        </ol>
-    </nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="institutions.html">Browse Institutions</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ document_data.institution_name }}</li>
+    </ol>
+</nav>
 <div class="container">
-    
+
     <div class="row">
         <div class="col-sm-3 p1">
         </div>
@@ -29,7 +33,8 @@
                 <table class="table">
                     <tr>
                         <th scope="row">Institution's Website</th>
-                        <td><a href="{{ document_data.institution_website}}">{{ document_data.institution_website}}</a></td>
+                        <td><a href="{{ document_data.institution_website}}">{{ document_data.institution_website}}</a>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">
@@ -39,7 +44,8 @@
                             <ul class="list-unstyled"">
                                 {% for x in document_data.editions %}
                                 <li>
-                                    <a href="{{ x.edition_resolver }}" title="go to detail view of {{ x.edition_name }}">{{ x.edition_name }}</a>
+                                    <a href=" {{ x.edition_resolver }}"
+                                title="go to detail view of {{ x.edition_name }}">{{ x.edition_name }}</a>
                                 </li>
                                 {% endfor %}
                             </ul>
@@ -51,14 +57,35 @@
                     </tr>
                     <tr>
                         <th scope="row">GND</th>
-                        <td><a href="{{ document_data.institution_gnd }}" title="linkt to GND entry">{{ document_data.institution_gnd }}</a></td>
+                        <td><a href="{{ document_data.institution_gnd }}" title="linkt to GND entry">{{
+                                document_data.institution_gnd }}</a></td>
                     </tr>
                 </table>
             </div>
             <div class="col-md">
-               
+                <div id="map" class="detail_view_map" />
             </div>
         </div>
     </div>
 </div>
 {% endblock content %}
+{% block scriptbody %}
+<script>
+    var label = "{{ document_data.institution_name }}";
+    var lat = {{ document_data.location_lat }};
+    var lng = {{ document_data.location_lng }};
+    var resolver = "{{ document_data.resolver }}";
+    const map = L.map('map').setView([lat, lng], 7);
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var marker = L.marker(
+        [lat, lng],
+        { alt: label }
+    )
+    marker.addTo(map).bindPopup(`<a href="${resolver}">${label}</a>`);
+
+</script>
+{% endblock scriptbody%}
