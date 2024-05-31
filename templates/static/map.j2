@@ -1,0 +1,37 @@
+{% extends "templates/partials/base.j2" %}
+{% block title %}Mapview{% endblock title %}
+{% block page_description %}
+<meta name="description" content="A map with all instutions responsible for the listed digital edition projects">
+{% endblock page_description %}
+{% block scriptHeader %}
+{% include 'templates/partials/leaflet.j2' %}
+{% endblock %}
+
+
+{% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Map of all Institutions</li>
+    </ol>
+</nav>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3 p1">
+        </div>
+        <div class="col-sm-6 p1 text-center">
+            <h1>Mapview</h1>
+        </div>
+        <div class="col-sm-3 p1">
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        
+            <div id="map" class="map" />
+    </div>
+</div>
+{% endblock content %}
+{% block scriptbody %}
+<script type="module" src="js/map.js"></script>
+{% endblock scriptbody%}

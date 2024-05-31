@@ -62,3 +62,10 @@ main {
     max-width: 100%;
     max-height: 100%;
 }
+
+.map {
+    width: 1000px;
+    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
+}
