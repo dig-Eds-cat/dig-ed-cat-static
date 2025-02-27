@@ -39,7 +39,6 @@ for i, x in enumerate(df.to_dict(orient="records"), start=1):
 
 editions_full = []
 for i, x in enumerate(editions, start=1):
-    x["id"] = f"{i}"
     x["resolver"] = f"entry-{i:03}.html"
     if i == 1:
         x["prev"] = ""
