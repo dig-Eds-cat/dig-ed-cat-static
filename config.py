@@ -1,7 +1,7 @@
 import os
 import typesense
 
-GITHUB_BASE = "https://raw.githubusercontent.com/gfranzini/digEds_cat/master"
+GITHUB_BASE = "https://raw.githubusercontent.com/dig-Eds-cat/digEds_cat/refs/heads/main/"
 
 EDITIONS = f"{GITHUB_BASE}/digEds_cat.csv"
 INSTITUTIONS = f"{GITHUB_BASE}/institutions_places_enriched.csv"
