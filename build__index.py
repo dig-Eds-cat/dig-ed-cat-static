@@ -25,7 +25,7 @@ ts_schema = make_schema(
 with open("html/schema.json", "w") as f:
     json.dump(ts_schema, f, ensure_ascii=False, indent=4)
 
-print(f"creating Typesnses Collection with schema {TS_SCHEMA_NAME}")
+print(f"creating Typesense Collection with schema {TS_SCHEMA_NAME}")
 cur_schema = delete_and_create_schema(TS_CLIENT, TS_SCHEMA_NAME, ts_schema)
 print(f"schema created at {cur_schema['created_at']}")
 print(f"start to index {len(editions_full)} records")
