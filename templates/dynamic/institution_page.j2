@@ -20,11 +20,17 @@
 
     <div class="row">
         <div class="col-sm-3 p1">
+        {% if document_data.prev %}
+            <h1 class="text-start"><a href="{{ document_data.prev }}"><i class="bi bi-chevron-left"></i></a></h1>
+        {% endif %}
         </div>
         <div class="col-sm-6 p1 text-center">
             <h1>{{ document_data.institution_name }}</h1>
         </div>
         <div class="col-sm-3 p1">
+        {% if document_data.next %}
+            <h1 class="text-end"><a href="{{ document_data.next }}"><i class="bi bi-chevron-right"></i></a></h1>
+        {% endif %}
         </div>
     </div>
     <div class="content">

@@ -1,4 +1,4 @@
-""" some helper functions """
+"""some helper functions"""
 
 import typesense
 
@@ -13,30 +13,6 @@ def strip(some_string: str) -> str:
         str: the same string without whitespaces
     """
     return some_string.strip()
-
-
-def resolve_number_codes(number_code: str) -> str:
-    """translates number codes into something human readable
-
-    Args:
-        number_code (str): either 0, 0.5, 1, 2, or 3
-
-    Returns:
-        str: "no", "partly", "yes"
-    """
-    if str(number_code) == "0":
-        return "no"
-    if str(number_code) == "0.5":
-        return "partly"
-    if str(number_code) == "1":
-        return "yes"
-    if str(number_code) == "1.5":
-        return "Open Access and Open Sourc (some data)"
-    if str(number_code) == "2":
-        return "Open Access and Open Source (all data)"
-    if str(number_code) == "2.0":
-        return "Open Access and Open Source (all data)"
-    return str(number_code)
 
 
 def make_schema(
