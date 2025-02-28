@@ -416,13 +416,6 @@
                             {% endif %} 
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row">handle</th>
-                        <td class="readmore"> handle-id</td>
-                        <td>
-                           <a href="http://hdl.handle.net/{{ document_data.handle_pid }}">{{ document_data.handle_pid }}</a>
-                        </td>
-                    </tr>
                 </table>
             </div>
             <div class="col-md">
@@ -432,7 +425,7 @@
         <div class="pt-2">
             <p class="text-center"><small>To cite this Catalogue entry, you can adapt the following</small></p>
             <blockquote class="blockquote">
-                <p>Catalogue of Digital Editions: <em>{{ document_data.edition_name }}</em>, DOI: <a href="http://hdl.handle.net/{{ document_data.handle_pid }}">http://hdl.handle.net/{{ document_data.handle_pid }}</a></p>
+                <p>Catalogue of Digital Editions: <em>{{ document_data.edition_name }}</em>, <a href="https://dig-ed-cat.acdh.oeaw.ac.at/{{ document_data.resolver }}">https://dig-ed-cat.acdh.oeaw.ac.at/{{ document_data.resolver }}</a></p>
             </blockquote>
         </div>
     </div>
