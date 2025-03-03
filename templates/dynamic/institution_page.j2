@@ -19,18 +19,28 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-sm-3 p1">
-        {% if document_data.prev %}
-            <h1 class="text-start"><a href="{{ document_data.prev }}"><i class="bi bi-chevron-left"></i></a></h1>
-        {% endif %}
+        <div class="col-sm-3 p-1 text-start">
+            {% if document_data.prev %}
+            <span class="fs-1">
+                <a href="{{ document_data.prev }}">
+                    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">Previous entry</span>
+                </a>
+            </span>
+            {% endif %}
         </div>
         <div class="col-sm-6 p1 text-center">
             <h1>{{ document_data.institution_name }}</h1>
         </div>
-        <div class="col-sm-3 p1">
-        {% if document_data.next %}
-            <h1 class="text-end"><a href="{{ document_data.next }}"><i class="bi bi-chevron-right"></i></a></h1>
-        {% endif %}
+        <div class="col-sm-3 p-1 text-end">
+            {% if document_data.next %}
+            <span class="fs-1">
+                <a href="{{ document_data.next }}">
+                    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">Next entry</span>
+                </a>
+            </span>
+            {% endif %}
         </div>
     </div>
     <div class="content">
