@@ -1,3 +1,17 @@
+:root {
+    --bs-link-color: #0046a6;
+    --bs-link-hover-color: #003380;
+}
+
+a {
+    color: var(--bs-link-color);
+    text-decoration: dotted underline;
+}
+
+a:hover {
+    color: var(--bs-link-hover-color);
+}
+
 h1 {
     padding-top: 1em;
     text-align: center;
@@ -7,12 +21,6 @@ main {
     padding-bottom: 2em;
 }
 
-.footer {
-    padding: 2em;
-    /* background-color: #333; */
-    /* color: #ffffff; */
-    font-size: 13px;
-}
 
 .blockquote {
     border-left-style: solid;
