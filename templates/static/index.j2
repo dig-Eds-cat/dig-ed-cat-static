@@ -1,77 +1,34 @@
 {% extends "templates/partials/base.j2" %}
+{% block title %}{{ project_data.project_title }}{% endblock title %}
+{% block page_description %}
+<meta name="description" content="whatever">
+{% endblock page_description %}
+
 {% block content %}
-    <div class="index-wrapper container">
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Heads up!</strong> The <a href="https://github.com/acdh-oeaw/dig_ed_cat/issues/244" title="link to github issue discussing tech stack change">old application</a> has reached its end of life. The new application (this one) is currently still under development. Click <a href="https://github.com/acdh-oeaw/dig-ed-cat-static/issues" title="link to code repo's issue tracker">here</a> to follow the development.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-        <div class="card">
-            <img src="img/DigEds_Cat_logo_transp.png" class="img-responsive" alt="logo">
-            <div class="pt-4 pb-3 text-end"><button class="btn btn-outline-secondary"><a href="editions.html" title="Click HERE to browse the editions or select an option from the black menu bar above" class="fs-3"><i class="bi bi-chevron-right"></i> explore the catalogue</a></button></div>
+<div class="container col-xxl-8 px-2">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+        
+        <div class="col-10 col-sm-8 col-lg-6">
+            <figure class="figure">
+            <img src="img/DigEds_Cat_logo_transp.png" class="d-block mx-lg-auto img-fluid"
+                alt="Title Image" width="700" height="500" loading="lazy">
+            </figure>
         </div>
-
-        <div class="row d-flex align-items-stretch">
-
-            <div class="col-lg p-2">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <p><strong><em>Why?</em></strong> &nbsp;&nbsp; Since 2012 the <em>Catalogue of
-                                Digital Editions</em> has been gathering digital editions and texts in an attempt to
-                            survey and
-                            identify best practice in the field of digital scholarly editing. Analogous initiatives
-                            exist but
-                            don't provide the granular analysis of features necessary to better understand the rationale
-                            and
-                            methodology behind the creation of a digital edition. This <em>Catalogue</em> provides an
-                            accessible
-                            record of standards and building technologies used, and thus an insight into past and
-                            present
-                            projects.</p>
-                    </div>
+        <div class="col-lg-6">
+            <h1 class="visually-hidden">
+                {{ project_data.project_title }}
+            </h1>
+            <p class="lead text-center">Gathering digital editions to publish, survey, and identify best practice in the field of digital scholarly editing. 
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="search.html" type="button"
+                    class="btn btn-primary btn-lg px-4 me-md-2">Search
+                </a>
+                <a href="editions.html" type="button"
+                    class="btn btn-outline-secondary btn-lg px-4">Browse</a>
                 </div>
-            </div>
-
-            <div class="col-lg p-2">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <p><strong><em>How?</em></strong> &nbsp;&nbsp; Development on this web application
-                            began in 2016 and aims at delivering the <em>Catalogue</em> data in an interactive and
-                            user-friendly
-                            manner, allowing users to browse, search, filter and order projects around their research
-                            interests.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg p-2">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <p><strong><em>What?</em></strong> &nbsp;&nbsp; The <em>Catalogue</em> continuously
-                            adds digital editions and always seeks external contributions. For instructions on how to
-                            submit a
-                            digital edition to the <em>Catalogue</em>, please visit the <a target="_blank"
-                                href="documentation.html">Documentation</a> page of this site.<br /><br />
-                            Projects added will be exposed to over 300 German libraries thanks to the
-                            <em>Catalogue</em>'s
-                            integration into the <a href="http://dbis.uni-regensburg.de//fachliste.php?lett=l"
-                                target="_blank" title="Opens in new tab">German Library Network (DBIS)</a>.</p>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
-        <h2 class="pt-4 pb-2">News</h2>
-        <hr class="border border-success border-2">
-
-        {% for x in news %}
-        {% if loop.index <= 5 %}
-        <h3 class="ps-2 pt-2 text-success">{{ x.title }}</h3>
-        <div class="ps-3 pt-1">{{ x.body|safe }}</div>
-        {% endif %}
-        {% endfor %}
-        <div class="pt-4 pb-3 text-end"><button class="btn btn-outline-secondary"><a href="news.html" title="Click to see all news items"><i class="bi bi-chevron-right"></i> All news</a></button></div>
-
     </div>
-    {% endblock %}
+</div>
+
+{% endblock content %}
