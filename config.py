@@ -418,6 +418,117 @@ The values `yes` or `no` are used to specify if the digital edition provides a f
         "optional": True,
         "verbose_name": "Technological statement",
         "help_text": """
-The values `yes` or `no` are used to specify if the digital edition provides a feedback space or contact information for users to make comments or suggestions."""  # noqa: E501
+This category assesses whether the digital edition provides complete information about technical aspects and practices.
+* `no`: no information.
+* `partly`: partial information.
+* `yes`: complete information."""  # noqa: E501
+    },
+    {
+        "name": "links_to_ext_resources",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Technological statement",
+        "help_text": """The values `yes` or `no` are used to specify if the digital edition provides links to external relevant resources."""  # noqa: E501
+    },
+    {
+        "name": "ocr_or_keyed",
+        "type": "string[]",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "OCR'd or keyed",
+        "help_text": """The source text was digitised with Optical Character Recognition (OCR) software or manually Keyed in. Use `Keyed`, `OCR` or `Keyed; OCR"""  # noqa: E501
+    },
+    {
+        "name": "mobile_friendly_application",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Mobile-friendly/application",
+        "help_text": """The values `yes` or `no` are used to tell if the project is mobile friendly"""  # noqa: E501
+    },
+    {
+        "name": "print_friendly_view",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Print-friendly view",
+        "help_text": """The values `yes` or `no` are used to specify if the digital edition provides a print-friendly view of the text (e.g. PDF) or if the browser produces a suitable, printable version of the content."""  # noqa: E501
+    },
+    {
+        "name": "print_facsimile_complementary_output",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Print facsimile (complementary output)",
+        "help_text": """The values `yes` or `no` are used to specify if the digital project is complemented by a printed facsimile."""  # noqa: E501
+    },
+    {
+        "name": "repository_of_source_material_s",
+        "type": "string[]",
+        "facet": True,
+        "optional": True,
+        "optional": True,
+        "verbose_name": "Repository of source material",
+        "help_text": """The institution(s) that house the source text(s). `N/A` is used if the source is a new edition without a physical location, and `not provided` is used to indicate that the project website does not give clear information about the source's current repository."""  # noqa: E501
+    },
+    {
+        "name": "place_of_origin_of_source_material_s",
+        "type": "string[]",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Place of origin of source material",
+        "help_text": """If known, the location from which the source text originated or where it was produced. `N/A` is used to indicate that the project does not have a physical provenance, and `not provided` is used to indicate that the project website does not give clear information about the source's provenance."""  # noqa: E501
+    },
+    {
+        "name": "sponsor_funding_body",
+        "type": "string[]",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Sponsor/Funding body",
+        "help_text": """The name of the funding agency. `N/A` is used if the project isn't supported by third-party funding."""  # noqa: E501
+    },
+    {
+        "name": "budget_rough",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "sort": True,
+        "verbose_name": "Budget (rough)",
+        "help_text": """How much the project cost. All currencies are supported and the numeric value should use commas as thousands separators (e.g. £10,000). The value `not provided` is used to indicate that the project website does not make this information known; `0` is used to indicate that the project specifies that it does not rely on funding."""  # noqa: E501
+    },
+    {
+        "name": "infrastructure",
+        "type": "string[]",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Infrastructure",
+        "help_text": """The technologies used to build the digital edition (Drupal, Omeka, MySQL, etc.). If multiple, please separate with a semicolon."""  # noqa: E501
+    },
+    {
+        "name": "current_availability",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Current availability",
+        "help_text": """Even if completed in the past, the digital edition is still viewable online today. The values `yes`(alive) and `no` (not available) are used."""  # noqa: E501
+    },
+    {
+        "name": "ride_review",
+        "type": "string",
+        "facet": False,
+        "optional": True,
+        "sort": True,
+        "verbose_name": "Reviewed in RIDE",
+        "help_text": """Was the edition reviewed in [RIDE](https://ride.i-d-e.de/), add the URL to the review or `no`"""  # noqa: E501
+    },
+    {
+        "name": "sahle_catalog",
+        "type": "string",
+        "facet": False,
+        "optional": True,
+        "sort": True,
+        "verbose_name": "Sahle Catalog",
+        "help_text": """Is the edition mentioned in [https://www.digitale-edition.de](https://www.digitale-edition.de) add the URL to the entry (e.g. https://digitale-edition.de/e862) or `no`"""  # noqa: E501
     },
 ]
