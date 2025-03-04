@@ -262,4 +262,162 @@ The source material is encoded in XML-TEI. Values:
 * `partly`
 * `yes`""",
     },
+    {
+        "name": "images",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Images",
+        "help_text": """
+The values `no`, `partly` or `yes` are used to specify if the edition comes with images. The value `not provided` is used for digital editions protected by access restrictions or paywalls whose homepage does not make clear whether images are provided.""",  # noqa: E501
+    },
+    {
+        "name": "zoom_images",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Zoom images",
+        "help_text": """
+The values `yes` or `no` are used to specify if the user can zoom in or out of images.""",
+    },
+    {
+        "name": "image_manipulation_brightness_rotation_etc",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Image manipulation",
+        "help_text": """
+The values `yes`or `no` are used to specify whether the user can manipulate the images (e.g. rotation, brightness, etc.).""",  # noqa: E501
+    },
+    {
+        "name": "text_image_linking",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Image manipulation",
+        "help_text": """
+The values `yes` or `no` are used to tell us whether the transcription and the image are linked so that clicking on a word (or line) in the image brings up the corresponding word in the transcription and vice-versa.""",  # noqa: E501
+    },
+    {
+        "name": "source_text_translation",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Source text translation",
+        "help_text": """
+The project provides a translation of the source material (not necessarily into English). If so, the corresponding [three-letter ISO codes](http://www.loc.gov/standards/iso639-2/php/code_list.php) should be used. If not, type `no`.""",  # noqa: E501
+    },
+    {
+        "name": "website_language",
+        "type": "string[]",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Website language",
+        "help_text": """
+The project website is available in multiple languages. If so, the corresponding [three-letter ISO codes](http://www.loc.gov/standards/iso639-2/php/code_list.php) should be used. If not, simply type `no`.""",  # noqa: E501
+    },
+    {
+        "name": "glossary",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Glossary",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition provides a glossary.""",  # noqa: E501
+    },
+    {
+        "name": "indices",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Indices",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition provides indices.""",
+    },
+    {
+        "name": "string_matching",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "String matching search",
+        "help_text": """
+The values `yes` or `no` are used to specify if the edition provides string matching (full text) search possibilities.
+""",
+    },
+    {
+        "name": "advanced_search",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Advanced search",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition provides advanced search functionality."""
+    },
+    {
+        "name": "creative_commons_license",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Creative Commons License",
+        "help_text": """
+The values `yes`, `partially` or `no` are used to specify if the digital edition is protected by a Creative Commons License."""  # noqa: E501
+    },
+    {
+        "name": "open_source_open_access",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Open Source/Open Access",
+        "help_text": """
+* `no`: Proprietary, all material is copyrighted. The source is closed and not reusable by other research projects. To access the material, users must pay a subscription fee.
+* `partly`: Same as above but the subscription is free of charge.
+* `yes`: Open Access. The texts may be accessed through specific software but the source is not accessible.
+* `Open Access and Open Source (some data)`: Open Access and Open Source. Part of the data underlying the digital edition (e.g. text but not images) is freely available for access and reuse.
+* `Open Access and Open Source (all data)`: Open Access and Open Source. All data underlying the digital edition is freely available for access and reuse."""  # noqa: E501
+    },
+    {
+        "name": "linked_open_data",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Linked Open Data (LOD)",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition makes use of [Linked Open Data](https://programminghistorian.org/lessons/intro-to-linked-data) (LOD) standards and if it is linked to other projects/data."""  # noqa: E501
+    },
+    {
+        "name": "api",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Application Programming Interface (API)",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition comes with an API."""
+    },
+    {
+        "name": "crowdsourcing",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Crowdsourcing",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition relies/relied on crowdsourced contributions."""
+    },
+    {
+        "name": "feedback",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Feedback",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition provides a feedback space or contact information for users to make comments or suggestions."""  # noqa: E501
+    },
+    {
+        "name": "technological_statement",
+        "type": "string",
+        "facet": True,
+        "optional": True,
+        "verbose_name": "Technological statement",
+        "help_text": """
+The values `yes` or `no` are used to specify if the digital edition provides a feedback space or contact information for users to make comments or suggestions."""  # noqa: E501
+    },
 ]
