@@ -2,9 +2,10 @@ import os
 import typesense
 
 GITHUB_BASE = (
-    "https://raw.githubusercontent.com/dig-Eds-cat/digEds_cat/refs/heads/main/"
+    "https://raw.githubusercontent.com/dig-Eds-cat/digEds_cat/refs/heads/main"
 )
 
+DATA_SCHEMA_URL = f"{GITHUB_BASE}/schema.json"
 EDITIONS = f"{GITHUB_BASE}/digEds_cat.csv"
 INSTITUTIONS = f"{GITHUB_BASE}/institutions_places_enriched.csv"
 
@@ -21,7 +22,6 @@ TS_CLIENT = typesense.Client(
         "connection_timeout_seconds": 2,
     }
 )
-
 
 TS_SCHEMA_NAME = "dig-ed-cat"
 

@@ -63,6 +63,7 @@ var table = new Tabulator("#example-table", {
         },
         { title: "Language", field: "language", headerFilter: "input", width: 150 },
         { title: "URL", field: "url", formatter: "link", headerFilter: "input" },
+        { title: "Alive", field: "current_availability", headerFilter: "input" },
     ]
 });
 
