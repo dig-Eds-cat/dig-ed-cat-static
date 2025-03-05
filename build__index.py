@@ -1,27 +1,20 @@
 import json
+import requests
 
-from config import (
-    TS_CLIENT,
-    TS_SCHEMA_NAME,
-    MANDATORY_FIELDS,
-    NO_FACET_FIELDS,
-    NO_INDEX_FIELDS,
-)
-
-from utils import (
-    make_schema,
-    delete_and_create_schema,
-)
+from config import TS_CLIENT, TS_SCHEMA_NAME, DATA_SCHEMA_URL
+from utils import delete_and_create_schema
 
 print("hallo, lets start indexing")
+ts_schema = {"name": TS_SCHEMA_NAME, "enable_nested_fields": True}
+
+ts_fields = requests.get(DATA_SCHEMA_URL).json()
+ts_schema["fields"] = ts_fields
 
 with open("./html/data/editions.json", "r") as f:
     editions_full = json.load(f)
 print("Typesense Index")
 print(f"defining Typesense collection schema with name: {TS_SCHEMA_NAME}")
-ts_schema = make_schema(
-    editions_full[0], "dig-ed-cat", MANDATORY_FIELDS, NO_FACET_FIELDS, NO_INDEX_FIELDS
-)
+
 with open("html/schema.json", "w") as f:
     json.dump(ts_schema, f, ensure_ascii=False, indent=4)
 

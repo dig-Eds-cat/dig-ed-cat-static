@@ -1,4 +1,5 @@
 import json
+import requests
 import pandas as pd
 from slugify import slugify
 from utils import strip
@@ -6,10 +7,19 @@ from utils import strip
 from config import (
     EDITIONS,
     INSTITUTIONS,
-    FACET_FIELDS,
+    DATA_SCHEMA_URL
 )
-
 print("hallo, lets create html/data/editionsjson.")
+
+ts_fields = requests.get(DATA_SCHEMA_URL).json()
+
+with open("fields.json", "w", encoding="utf-8") as fp:
+    json.dump(ts_fields, fp, ensure_ascii=False)
+
+facet_fields = []
+for x in ts_fields:
+    if x["type"][-1] == "]":
+        facet_fields.append(x["name"])
 
 print(f"fetching {EDITIONS}")
 df = pd.read_csv(EDITIONS)
@@ -69,7 +79,7 @@ for i, x in enumerate(editions, start=0):
         except KeyError:
             continue
     x["institution_s"] = institutions
-    for f in FACET_FIELDS:
+    for f in facet_fields:
         try:
             x[f] = [x.strip() for x in x[f].split(";")]
         except AttributeError:
