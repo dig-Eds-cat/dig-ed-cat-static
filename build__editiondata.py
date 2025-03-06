@@ -13,8 +13,8 @@ print("hallo, lets create html/data/editionsjson.")
 
 ts_fields = requests.get(DATA_SCHEMA_URL).json()
 
-with open("fields.json", "w", encoding="utf-8") as fp:
-    json.dump(ts_fields, fp, ensure_ascii=False)
+with open("html/data/fields.json", "w", encoding="utf-8") as fp:
+    json.dump(ts_fields, fp, ensure_ascii=False, indent=2)
 
 facet_fields = []
 for x in ts_fields:
