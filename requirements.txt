@@ -6,3 +6,4 @@ typesense
 python-slugify
 black
 flake8
+markdown
