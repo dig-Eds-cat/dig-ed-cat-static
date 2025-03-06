@@ -80,3 +80,7 @@ main {
 .leaflet-popup {
     overflow: scroll;
 }
+
+dd {
+    padding-left: 1rem;
+}
