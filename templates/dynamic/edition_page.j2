@@ -49,6 +49,7 @@
     <div class="content">
         <div class="row">
             <div class="col-md">
+                <h2 class="text-center">Info</h2>
                 <dl>
                     {% for x in document_data.fields %}
                         <dt>{{ x.verbose_name }}
@@ -79,15 +80,33 @@
                 </dl>
             </div>
             <div class="col-md">
-                <div id="map" class="detail_view_map"/>
+                <h2 class="text-center">Screenshot</h2>
+                <div class="screenshot p-2">
+                    {% if document_data.screenshot %}
+                    <figure class="figure">
+                        <img src="{{ document_data.screenshot }}" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="text-end figure-caption">Start page of <a href="{{ document_data.url }}">{{ document_data.edition_name }}</a></figcaption>
+                      </figure>
+                    {% else %}
+                        <div class="alert alert-info fs-3" role="alert">
+                            The website seems to be offline.
+                        </div>
+                    {% endif %}
+                </div>
+                <h2 class="text-center">Institutions</h2>
+                <div id="map" class="detail_view_map"></div>
+                <hr class="p-2" />
+                <h2 class="text-center">How to quote</h2>
+                <div class="pt-2">
+                    <p class="text-center"><small>To cite this Catalogue entry, you can adapt the following</small></p>
+                    <blockquote class="blockquote">
+                        <p>Catalogue of Digital Editions: <em>{{ document_data.edition_name }}</em>, <a href="https://dig-ed-cat.acdh.oeaw.ac.at/{{ document_data.resolver }}">https://dig-ed-cat.acdh.oeaw.ac.at/{{ document_data.resolver }}</a></p>
+                    </blockquote>
+                </div>
             </div>
         </div>
-        <div class="pt-2">
-            <p class="text-center"><small>To cite this Catalogue entry, you can adapt the following</small></p>
-            <blockquote class="blockquote">
-                <p>Catalogue of Digital Editions: <em>{{ document_data.edition_name }}</em>, <a href="https://dig-ed-cat.acdh.oeaw.ac.at/{{ document_data.resolver }}">https://dig-ed-cat.acdh.oeaw.ac.at/{{ document_data.resolver }}</a></p>
-            </blockquote>
-        </div>
+        
+        
     </div>
 </div>
 {% endblock content %}
@@ -121,7 +140,6 @@
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Hide all <td> elements with class 'readmore'
         var readmoreElements = document.querySelectorAll('.readmore');
         readmoreElements.forEach(function (element) {
             element.style.display = 'none';
@@ -132,7 +150,7 @@
         var readmoreElements = document.querySelectorAll('.readmore');
         readmoreElements.forEach(function (element) {
             if (element.style.display === 'none') {
-                element.style.display = 'block'; // or 'block' depending on your layout
+                element.style.display = 'block';
             } else {
                 element.style.display = 'none';
             }

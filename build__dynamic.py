@@ -3,6 +3,8 @@ import jinja2
 import json
 import markdown
 
+from config import SCREENSHOTS
+
 templateLoader = jinja2.FileSystemLoader(searchpath=".")
 templateEnv = jinja2.Environment(loader=templateLoader)
 
@@ -29,6 +31,10 @@ os.makedirs(out_dir, exist_ok=True)
 page_template = templateEnv.get_template("./templates/dynamic/edition_page.j2")
 
 for x in data:
+    if x["current_availability"] == "yes":
+        x["screenshot"] = SCREENSHOTS.format(x["id"])
+    else:
+        x["screenshot"] = False
     x["fields"] = []
     for key, value in fields.items():
         obj = value.copy()
