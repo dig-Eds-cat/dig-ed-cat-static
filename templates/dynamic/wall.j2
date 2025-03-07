@@ -1,0 +1,40 @@
+{% extends "templates/partials/base.j2" %}
+{% block title %}Edition Screenshots{% endblock title %}
+
+{% block page_description %}
+<meta name="description" content="Gallery of digital-edition start page screenshots">
+{% endblock page_description %}
+
+{% block scriptHeader %}
+{% endblock %}
+
+{% block content %}
+<nav class="ps-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edition Screenshots</li>
+    </ol>
+</nav>
+<div class="container">
+    <h1 class="text-center p-2">Edition Screenshots</h1>
+    
+        {% for x in images %}
+        <div class="row p-1">
+            {% for y in x %}
+            <div class="col-md-6">
+                <figure class="figure">
+                    <a href="{{ y.resolver }}">
+                        <img loading="lazy" src="{{ y.screenshot }}" class="figure-img img-fluid rounded" alt="{{ y.name }}">
+                    </a>
+                    <figcaption class="figure-caption text-center"><a href="{{ y.url }}">{{ y.name }}</a></figcaption>
+                </figure>
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+{% block scriptbody %}
+{% endblock %}

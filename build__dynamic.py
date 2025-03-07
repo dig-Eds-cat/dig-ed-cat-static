@@ -1,9 +1,11 @@
 import os
+import random
 import jinja2
 import json
 import markdown
 
 from config import SCREENSHOTS
+
 
 templateLoader = jinja2.FileSystemLoader(searchpath=".")
 templateEnv = jinja2.Environment(loader=templateLoader)
@@ -45,6 +47,31 @@ for x in data:
         f.write(
             page_template.render({"project_data": project_data, "document_data": x})
         )
+
+
+print("#########################")
+print("building wall")
+page_template = templateEnv.get_template("./templates/dynamic/wall.j2")
+
+images = []
+for x in data:
+    if x["current_availability"] == "yes":
+        item = {
+            "name": x["edition_name"].replace('"', "'"),
+            "screenshot": x["screenshot"],
+            "url": x["url"],
+            "resolver": x["resolver"],
+        }
+        images.append(item)
+
+images = sorted(images, key=lambda item: item["url"])
+grouped_images = [images[i : i + 2] for i in range(0, len(images), 2)]  # noqa:E203
+images = grouped_images
+with open(os.path.join("html", "wall.html"), "w", encoding="utf-8") as f:
+    f.write(
+        page_template.render({"project_data": project_data, "images": grouped_images})
+    )
+
 
 print("#########################")
 print("building institution pages")
