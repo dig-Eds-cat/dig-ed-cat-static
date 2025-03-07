@@ -1,5 +1,4 @@
 import os
-import random
 import jinja2
 import json
 import markdown
