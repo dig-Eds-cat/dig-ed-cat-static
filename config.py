@@ -5,6 +5,8 @@ GITHUB_BASE = (
     "https://raw.githubusercontent.com/dig-Eds-cat/digEds_cat/refs/heads/main"
 )
 
+SCREENSHOTS = "https://raw.githubusercontent.com/dig-Eds-cat/screenshots/refs/heads/main/screenshots/{}.png"
+
 DATA_SCHEMA_URL = f"{GITHUB_BASE}/schema.json"
 EDITIONS = f"{GITHUB_BASE}/digEds_cat.csv"
 INSTITUTIONS = f"{GITHUB_BASE}/institutions_places_enriched.csv"
