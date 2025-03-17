@@ -49,6 +49,7 @@ var table = new Tabulator("#example-table", {
     layout: "fitColumns",
     responsiveLayout: "collapse",
     columns: [
+        { title: "ID", field: "id", width: 80, headerFilter: "input" },
         { title: "Name", field: "institution_name", minWidth: 300, headerFilter: "input", formatter: linkToDetailView },
         { title: "Country", field: "part_of", headerFilter: "input" },
         { title: "Editions", field: "edition_counter", headerFilter: "input" },
