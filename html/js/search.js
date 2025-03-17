@@ -121,7 +121,7 @@ search.addWidgets([
             header: 'Institutions',
         },
     })(instantsearch.widgets.refinementList)({
-        container: "#refinement-list-institutions",
+        container: "#refinement-list-institution_s",
         attribute: "institution_s.institution_name",
         searchable: true,
         showMore: true,
@@ -158,5 +158,34 @@ search.addWidgets([
     }),
 
 ]);
+
+// Add faceted search widgets dynamically from fields.json
+fetch('data/fields.json')
+    .then(response => response.json())
+    .then(fields => {
+        const facetWidgets = fields
+            .filter(field => field.facet === true)
+            .map(field => 
+                instantsearch.widgets.panel({
+                    collapsed: ({ state }) => {
+                        return state.query.length === 0;
+                    },
+                    templates: {
+                        header: field.verbose_name,
+                    },
+                })(instantsearch.widgets.refinementList)({
+                    container: `#refinement-list-${field.name}`,
+                    attribute: field.name,
+                    searchable: true,
+                    showMore: true,
+                    showMoreLimit: 50,
+                    limit: 10,
+                    searchablePlaceholder: `Search for ${field.verbose_name}`,
+                    cssClasses: DEFAULT_CSS_CLASSES,
+                })
+            );
+        
+        search.addWidgets(facetWidgets);
+    });
 
 search.start();

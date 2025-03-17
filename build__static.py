@@ -12,6 +12,9 @@ out_dir = "html"
 with open("project.json", "r", encoding="utf-8") as f:
     project_data = json.load(f)
 
+with open(os.path.join(out_dir, "data", "fields.json"), "r", encoding="utf-8") as f:
+    fields_data = json.load(f)
+
 redmine_id = project_data["redmine_id"]
 imprint_url = f"https://imprint.acdh.oeaw.ac.at/{redmine_id}?locale=en"
 print(imprint_url)
@@ -40,4 +43,4 @@ for x in files:
     print(f"rendering {tail}")
     output_path = os.path.join("html", tail.replace(".j2", ".html"))
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write(template.render({"project_data": project_data, "news": news}))
+        f.write(template.render({"project_data": project_data, "news": news, "fields_data": fields_data}))
