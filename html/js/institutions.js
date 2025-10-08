@@ -67,3 +67,14 @@ table.on("dataFiltered", function (filters, data) {
     var el = document.getElementById("counter1");
     el.innerHTML = `${data.length}`;
 });
+
+document.getElementById("download-csv").addEventListener("click", function () {
+  table.download("csv", "dig-ed-cat-institutions.csv");
+});
+
+document.getElementById("download-excel").addEventListener("click", function () {
+  table.download("xlsx", "dig-ed-cat-institutions.xlsx", {sheetName:"digedcatinst"}); 
+});
+document.getElementById("download-json").addEventListener("click", function () {
+  table.download("json", "dig-ed-cat-institutions.json"); 
+});

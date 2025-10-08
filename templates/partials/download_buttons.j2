@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-end">
+    <div class="btn-group btn-group-sm pt-2 pb-2">
+        <button type="button" class="btn btn-outline-primary" id="download-csv" title="Download CSV">
+            <i class="bi bi-filetype-csv"></i>
+            <span class="ps-2">Download CSV</span>
+        </button>
+        <button type="button" class="btn btn-outline-primary" id="download-excel" title="Download as Excel file">
+            <i class="bi bi-file-earmark-excel"></i>
+            <span class="ps-2">Download Excel</span>
+        </button>
+        <button type="button" class="btn btn-outline-primary" id="download-json"
+                    title="Download JSON">
+            <i class="bi bi-filetype-json"></i>
+            <span class="ps-2">Download JSON</span>
+        </button>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Information about the download">
+            <i class="bi bi-info-square"></i>
+            <span class="ps-2">Info</span>
+        </button>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Download Info</h1>
+      </div>
+      <div class="modal-body">
+        <p>On this page you can download the content of the table below. Note that this table shows only a portion of the full dataset; the complete dataset (editions and institutions) is available as CSV files in <a href="https://github.com/dig-Eds-cat/digEds_cat">the catalogue's data repository</a>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
