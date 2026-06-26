@@ -9,6 +9,11 @@ ts_schema = {"name": TS_SCHEMA_NAME, "enable_nested_fields": True}
 
 ts_fields = requests.get(DATA_SCHEMA_URL).json()
 ts_schema["fields"] = ts_fields
+ts_schema["metadata"] = {
+        "owners": ["Peter Andorfer"],
+        "description": "https://github.com/dig-Eds-cat/dig-ed-cat-static",
+        "service_ids": [5976],
+    }
 
 with open("./html/data/editions.json", "r") as f:
     editions_full = json.load(f)
